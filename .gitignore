@@ -34,3 +34,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Firebase files
+.firebase/
+
+# Cloud Functions
+functions/node_modules/
+functions/lib/
+
+# Firestore emulator
+.firestore/
+
+# Firebase Tools
+.firebaserc
