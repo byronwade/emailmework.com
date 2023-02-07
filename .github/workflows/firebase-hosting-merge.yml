@@ -19,3 +19,5 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_EMAILMEWORK_COM_9A4C1 }}"
           channelId: live
           projectId: emailmework-com-9a4c1
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
