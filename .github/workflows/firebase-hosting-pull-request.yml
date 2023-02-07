@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm i && npm run build
+      - run: firebase-tools@latest
+      - run: firebase experiments:enable webframeworks
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
