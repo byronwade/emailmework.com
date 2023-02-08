@@ -113,11 +113,23 @@ This collection stores information about the jobs that are posted on the platfor
 *   `category`: The category of the job, such as plumbing, electrical, etc.
 
 # Collection: "Job Scores"
-This collection stores the relevance scores of jobs to clients. The scores are calculated based on several factors to ensure that the most relevant jobs are displayed to the client. The algorithm takes into consideration job location, budget, equipment required, client's past job history, and other relevant information to calculate a relevance score for each job.
+The goal of the Job Scores collection is to provide a system for sorting and ranking jobs based on their relevance to a particular client. The relevance score is calculated using a set of algorithms and formulas that take into account various factors that affect the suitability of a job for a particular client. These factors may include the job location, budget, equipment required, the client's past job history, and any other relevant information that can impact the relevance of the job.
+
+The algorithm uses this information to calculate a relevance score for each job, which is then stored in the Job Scores collection along with the job ID, client ID, and a timestamp of when the score was calculated. The relevance scores are updated dynamically, as new information becomes available, to ensure that the most relevant jobs are always displayed at the top of the list for a particular client.
+
+The sorting and ranking of jobs based on their relevance scores can help to improve the efficiency and accuracy of the job search process for clients, as it provides them with a customized and relevant list of job options. This can lead to better job matches, higher client satisfaction, and a more efficient use of time and resources for both clients and contractors.
+
+The Job Scores collection is an essential part of the job search and placement process, providing valuable insights and information that can be used to improve the overall experience for clients and contractors.
 
 The algorithm uses a weighted average approach to calculate the relevance scores. Each factor is assigned a weight, which represents its importance in determining the relevance of the job. For example, the job location may have a higher weight compared to the budget as it is more important for some clients. The weightings are determined based on statistical analysis of previous job search patterns and preferences of clients.
 
 The scores are updated regularly to ensure that the most accurate information is displayed to the client. This system helps to improve the job search experience for the client, as they will only see jobs that are relevant to their needs and preferences.
+
+## Experimental AI-based Score Calculation
+(Note: This section describes an experimental approach and its implementation may vary. The conventional score calculation mentioned in the above section still remains the main method for relevance calculation)
+
+Recently, there have been attempts to improve the accuracy of the relevance scores by incorporating AI and machine learning algorithms. This involves training a model on historical data to predict the relevance score based on factors such as job location, budget, equipment required, client's past job history, etc. The experimental results so far have shown promising accuracy improvements, however, further research and refinement is still required before it can be fully integrated into the system.
+
 
 ### Fields
 *   `score_id` (Primary Key): A unique identifier for each score.
