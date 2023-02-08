@@ -45,9 +45,8 @@ This is just one way to write an algorithm to display the most relevant jobs to 
 
 Here is the same information with added descriptions and explanations:
 
-# Collection: "Admin Users"
--------------------------
 
+# Collection: "Admin Users"
 This collection stores the information for the admin users of the platform.
 
 ### Fields
@@ -59,8 +58,6 @@ This collection stores the information for the admin users of the platform.
 *   `created_at`: A timestamp for when the admin user was created.
 
 # Collection: "Contractor Companies"
-----------------------------------
-
 This collection stores the information for the contractor companies that are registered on the platform.
 
 ### Fields
@@ -96,8 +93,6 @@ This collection stores the information for the clients that are registered on th
 *   `preferred_location`: The address or GPS coordinates for the client's preferred job location.
 
 # Collection: "Jobs"
-------------------
-
 This collection stores information about the jobs that are posted on the platform.
 
 ### Fields
