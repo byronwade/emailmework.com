@@ -79,8 +79,6 @@ This collection stores the information for the contractor companies that are reg
 *   `score`: A relevance score for the job recommendations for the company.
 
 # Collection: "Clients"
----------------------
-
 This collection stores the information for the clients that are registered on the platform.
 
 ### Fields
@@ -121,8 +119,6 @@ This collection stores information about the jobs that are posted on the platfor
 *   `category`: The category of the job, such as plumbing, electrical, etc.
 
 # Collection: "Job Scores"
----------------------
-
 This collection stores the relevance scores of jobs to clients. The scores are calculated based on factors such as job location, budget, equipment required, client's past job history, etc. The highest scoring jobs can then be displayed to the client for better job relevance.
 
 ### Fields
@@ -133,8 +129,6 @@ This collection stores the relevance scores of jobs to clients. The scores are c
 *   `created_at` (timestamp): The date and time when the score was calculated.
 
 # Collection: "Notifications"
----------------------
-
 This collection stores the notifications that are sent between clients and contractor companies.
 
 ### Fields
@@ -146,8 +140,6 @@ This collection stores the notifications that are sent between clients and contr
 *   `timestamp`: The date and time when the notification was sent.
 
 # Collection: "Ratings & Reviews"
----------------------
-
 This collection stores the ratings and reviews left by clients and contractor companies for each other.
 
 ### Fields
@@ -160,8 +152,6 @@ This collection stores the ratings and reviews left by clients and contractor co
 *   `created_at` (timestamp): The date and time when the review was left.
 
 # Collection: "Orders"
----------------------
-
 This collection stores the orders placed by clients for jobs.
 
 ### Fields
@@ -173,8 +163,6 @@ This collection stores the orders placed by clients for jobs.
 *   `created_at` (timestamp): The date and time when the order was placed.
 
 # Collection: "Payments"
----------------------
-
 This collection stores information about payments made for orders.
 
 ### Fields
