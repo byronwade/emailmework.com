@@ -2,12 +2,12 @@
 
 ** Please keep in mind that im a novice progrmmer and plan to work on this app with minimal knowledge, ive got an idea and im figureing it out along the way. If you would like to help develop the project you can email me at [bcw1995@gmail.com](mailto://bcw1995@gmail.com)
 
-This platform will be open source for now, I plan to start biling at $1 per accepted job posting, with the companies paying for the leads. Competiters are chargin anywhere from $5-70 per job/lead accepted.
+This platform will be open source for now, I plan to start biling at $1 per accepted job posting, with the companies paying for the leads. Competiters are charging anywhere from $5-70 per job/lead accepted.
 
 # Full Description and goals
 At emailmework.com, we are dedicated to providing an unparalleled platform for companies to showcase their services. Our innovative platform enables companies to create in-depth profiles that include all the important details about their company such as history, website, and areas of expertise. Our ultimate goal is to bridge the gap between customers and companies and match them up in a seamless and effective way.
 
-To maintain fairness and quality, we have developed a sophisticated algorithm that rates both customers and companies on a scale of 1-100 based on factors such as customer behavior, frequency of reviews, and response time of the companies. This algorithm ensures that the right customer is matched with the right company, providing a positive experience for all. Furthermore, jobs will also be rated 1-100 based on the level of detail and quality of the content added.
+To maintain fairness and quality, we will developed a sophisticated algorithm that rates both customers and companies on a scale of 1-100 based on factors such as customer behavior, frequency of reviews, and response time of the companies. This algorithm ensures that the right customer is matched with the right company, providing a positive experience for all. Furthermore, jobs will also be rated 1-100 based on the level of detail and quality of the content added.
 
 We understand the limitations posed by traditional job boards and the frustration of customers being bombarded with irrelevant information through emails, phone calls, and texts. At emailmework.com, we are committed to fostering a respectful and collaborative community between companies and customers.
 
