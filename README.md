@@ -43,7 +43,6 @@ Note that the proximityScore and jobTypeScore functions are just examples and wo
 This is just one way to write an algorithm to display the most relevant jobs to clients in Node.js. You can also explore other algorithms such as machine learning models to achieve the same goal.
 
 
-Here is the same information with added descriptions and explanations:
 
 
 # Collection: "Admin Users"
@@ -114,7 +113,11 @@ This collection stores information about the jobs that are posted on the platfor
 *   `category`: The category of the job, such as plumbing, electrical, etc.
 
 # Collection: "Job Scores"
-This collection stores the relevance scores of jobs to clients. The scores are calculated based on factors such as job location, budget, equipment required, client's past job history, etc. The highest scoring jobs can then be displayed to the client for better job relevance.
+This collection stores the relevance scores of jobs to clients. The scores are calculated based on several factors to ensure that the most relevant jobs are displayed to the client. The algorithm takes into consideration job location, budget, equipment required, client's past job history, and other relevant information to calculate a relevance score for each job.
+
+The algorithm uses a weighted average approach to calculate the relevance scores. Each factor is assigned a weight, which represents its importance in determining the relevance of the job. For example, the job location may have a higher weight compared to the budget as it is more important for some clients. The weightings are determined based on statistical analysis of previous job search patterns and preferences of clients.
+
+The scores are updated regularly to ensure that the most accurate information is displayed to the client. This system helps to improve the job search experience for the client, as they will only see jobs that are relevant to their needs and preferences.
 
 ### Fields
 *   `score_id` (Primary Key): A unique identifier for each score.
