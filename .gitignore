@@ -47,3 +47,5 @@ functions/lib/
 
 # Firebase Tools
 .firebaserc
+
+.env.local
