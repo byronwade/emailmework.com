@@ -33,3 +33,202 @@
 [debug] [2023-02-09T07:57:44.503Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:102288994711:web:238a978abbeb276c0814d2/config [none]
 [debug] [2023-02-09T07:57:45.106Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:102288994711:web:238a978abbeb276c0814d2/config 200
 [debug] [2023-02-09T07:57:45.106Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:102288994711:web:238a978abbeb276c0814d2/config {"projectId":"emailmework-com-9a4c1","appId":"1:102288994711:web:238a978abbeb276c0814d2","databaseURL":"https://emailmework-com-9a4c1-default-rtdb.firebaseio.com","storageBucket":"emailmework-com-9a4c1.appspot.com","apiKey":"AIzaSyA1Z_AlDGABZqqXiQm9qYiCJ24im1DUNFQ","authDomain":"emailmework-com-9a4c1.firebaseapp.com","messagingSenderId":"102288994711","measurementId":"G-DYV9TTV85L"}
+[info] 
+[info] === Deploying to 'emailmework-com-9a4c1'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2023-02-09T07:58:07.718Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1:test [none]
+[debug] [2023-02-09T07:58:07.718Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1:test [omitted]
+[debug] [2023-02-09T07:58:08.252Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1:test 200
+[debug] [2023-02-09T07:58:08.252Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2023-02-09T07:58:08.253Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emailmework-com-9a4c1 [none]
+[debug] [2023-02-09T07:58:08.696Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emailmework-com-9a4c1 200
+[debug] [2023-02-09T07:58:08.696Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emailmework-com-9a4c1 {"projectId":"emailmework-com-9a4c1","projectNumber":"102288994711","displayName":"emailmework-com","name":"projects/emailmework-com-9a4c1","resources":{"hostingSite":"emailmework-com-9a4c1","realtimeDatabaseInstance":"emailmework-com-9a4c1-default-rtdb"},"state":"ACTIVE","etag":"1_a980d5dd-361a-43d0-b774-92e627394a42"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: preparing codebase firebase-frameworks-emailmework-com-9a4c1 for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-02-09T07:58:08.698Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-02-09T07:58:08.698Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/emailmework-com-9a4c1
+[debug] [2023-02-09T07:58:08.699Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-02-09T07:58:08.700Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/emailmework-com-9a4c1
+[debug] [2023-02-09T07:58:08.700Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/cloudbuild.googleapis.com [none]
+[debug] [2023-02-09T07:58:08.701Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/cloudbuild.googleapis.com x-goog-quota-user=projects/emailmework-com-9a4c1
+[debug] [2023-02-09T07:58:08.701Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/artifactregistry.googleapis.com [none]
+[debug] [2023-02-09T07:58:08.702Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/artifactregistry.googleapis.com x-goog-quota-user=projects/emailmework-com-9a4c1
+[debug] [2023-02-09T07:58:09.315Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/runtimeconfig.googleapis.com 200
+[debug] [2023-02-09T07:58:09.316Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-02-09T07:58:09.341Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/cloudbuild.googleapis.com 200
+[debug] [2023-02-09T07:58:09.341Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-02-09T07:58:09.359Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/cloudfunctions.googleapis.com 200
+[debug] [2023-02-09T07:58:09.360Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-02-09T07:58:09.365Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/artifactregistry.googleapis.com 200
+[debug] [2023-02-09T07:58:09.365Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-02-09T07:58:09.366Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emailmework-com-9a4c1/adminSdkConfig [none]
+[debug] [2023-02-09T07:58:09.663Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emailmework-com-9a4c1/adminSdkConfig 200
+[debug] [2023-02-09T07:58:09.663Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emailmework-com-9a4c1/adminSdkConfig {"projectId":"emailmework-com-9a4c1","databaseURL":"https://emailmework-com-9a4c1-default-rtdb.firebaseio.com","storageBucket":"emailmework-com-9a4c1.appspot.com"}
+[debug] [2023-02-09T07:58:09.663Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/emailmework-com-9a4c1/configs [none]
+[debug] [2023-02-09T07:58:09.926Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/emailmework-com-9a4c1/configs 200
+[debug] [2023-02-09T07:58:09.926Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/emailmework-com-9a4c1/configs {}
+[debug] [2023-02-09T07:58:09.928Z] Validating nodejs source
+[warn] ⚠  functions: Couldn't find firebase-functions package in your source code. Have you run 'npm install'? 
+[debug] [2023-02-09T07:58:09.930Z] getFunctionsSDKVersion encountered error:Cannot find module 'firebase-functions'
+Require stack:
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/index.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/gcp/cloudfunctions.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorShared.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/emulator/controller.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/emulator/commandUtils.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/commands/database-get.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/commands/index.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/index.js
+- /opt/homebrew/lib/node_modules/firebase-tools/lib/bin/firebase.js {"code":"MODULE_NOT_FOUND","requireStack":["/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/index.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/gcp/cloudfunctions.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorShared.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/emulator/controller.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/emulator/commandUtils.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/commands/database-get.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/commands/index.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/index.js","/opt/homebrew/lib/node_modules/firebase-tools/lib/bin/firebase.js"]}
+[debug] [2023-02-09T07:58:09.934Z] checkFunctionsSDKVersion encountered error:Invalid Version:  {}
+[debug] [2023-02-09T07:58:09.935Z] > [functions] package.json contents: {
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
+[debug] [2023-02-09T07:58:09.936Z] Building nodejs source
+[debug] [2023-02-09T07:58:09.936Z] Could not parse firebase-functions version '' into semver. Falling back to parseTriggers.
+[debug] [2023-02-09T07:58:10.011Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-09T07:58:10.485Z] > [functions] package.json contents: {
+  "name": "emailmework.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@next/font": "13.1.6",
+    "@types/node": "18.11.19",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "firebase": "^9.17.1",
+    "firebase-admin": "^11.5.0",
+    "framer-motion": "^9.0.2",
+    "next": "13.1.6",
+    "next-auth": "^4.19.2",
+    "next-seo": "^5.15.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "recoil": "^0.7.6",
+    "typescript": "4.9.5",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2023-02-09T07:58:10.485Z] Building nodejs source
+[debug] [2023-02-09T07:58:10.486Z] Found functions.yaml. Got spec: {
+  "endpoints": {
+    "ssremailmeworkcom9a4c1": {
+      "platform": "gcfv2",
+      "region": [
+        "us-central1"
+      ],
+      "labels": {},
+      "httpsTrigger": {},
+      "entryPoint": "ssr"
+    }
+  },
+  "specVersion": "v1alpha1",
+  "requiredAPIs": []
+}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase/emailmework-com-9a4c1/functions directory for uploading... 
+[info] i  functions: packaged /Users/byronwade/Desktop/emailmework.com/.firebase/emailmework-com-9a4c1/functions (194.25 MB) for uploading 
+[debug] [2023-02-09T07:58:18.715Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/emailmework-com-9a4c1/locations/-/functions [none]
+[debug] [2023-02-09T07:58:19.268Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/emailmework-com-9a4c1/locations/-/functions 200
+[debug] [2023-02-09T07:58:19.268Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/emailmework-com-9a4c1/locations/-/functions {}
+[debug] [2023-02-09T07:58:19.269Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/emailmework-com-9a4c1/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-02-09T07:58:19.991Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/emailmework-com-9a4c1/locations/-/functions 200
+[debug] [2023-02-09T07:58:19.991Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/emailmework-com-9a4c1/locations/-/functions {"functions":[{"name":"projects/emailmework-com-9a4c1/locations/us-central1/functions/ssremailmeworkcom9a4c1","buildConfig":{"build":"projects/102288994711/locations/us-central1/builds/bc05e971-1cfe-477c-b050-ad60355b2c34","runtime":"nodejs18","entryPoint":"ssr","source":{"storageSource":{"bucket":"gcf-v2-sources-102288994711-us-central1","object":"ssremailmeworkcom9a4c1/function-source.zip"}},"sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-102288994711-us-central1","object":"ssremailmeworkcom9a4c1/function-source.zip","generation":"1675926189985701"}}},"serviceConfig":{"service":"projects/emailmework-com-9a4c1/locations/us-central1/services/ssremailmeworkcom9a4c1","timeoutSeconds":60,"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"emailmework-com-9a4c1\",\"appId\":\"1:102288994711:web:238a978abbeb276c0814d2\",\"databaseURL\":\"https://emailmework-com-9a4c1-default-rtdb.firebaseio.com\",\"storageBucket\":\"emailmework-com-9a4c1.appspot.com\",\"apiKey\":\"AIzaSyA1Z_AlDGABZqqXiQm9qYiCJ24im1DUNFQ\",\"authDomain\":\"emailmework-com-9a4c1.firebaseapp.com\",\"messagingSenderId\":\"102288994711\",\"measurementId\":\"G-DYV9TTV85L\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"emailmework-com-9a4c1\",\"databaseURL\":\"https://emailmework-com-9a4c1-default-rtdb.firebaseio.com\",\"storageBucket\":\"emailmework-com-9a4c1.appspot.com\"}","GCLOUD_PROJECT":"emailmework-com-9a4c1","EVENTARC_CLOUD_EVENT_SOURCE":"projects/emailmework-com-9a4c1/locations/us-central1/services/ssremailmeworkcom9a4c1"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://ssremailmeworkcom9a4c1-hoqxyax34a-uc.a.run.app","serviceAccountEmail":"102288994711-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssremailmeworkcom9a4c1-00023-nok","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2023-02-09T07:06:30.430425243Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-emailmework-com-9a4c1","firebase-functions-hash":"2eddd26d6c7a6849cde86d98d5a03192725d1e8b"},"environment":"GEN_2"}]}
+[debug] [2023-02-09T07:58:19.991Z] >>> [apiv2][query] GET https://run.googleapis.com/v1/projects/emailmework-com-9a4c1/locations/us-central1/services/ssremailmeworkcom9a4c1 [none]
+[debug] [2023-02-09T07:58:20.575Z] <<< [apiv2][status] GET https://run.googleapis.com/v1/projects/emailmework-com-9a4c1/locations/us-central1/services/ssremailmeworkcom9a4c1 200
+[debug] [2023-02-09T07:58:20.575Z] <<< [apiv2][body] GET https://run.googleapis.com/v1/projects/emailmework-com-9a4c1/locations/us-central1/services/ssremailmeworkcom9a4c1 {"apiVersion":"serving.knative.dev/v1","kind":"Service","metadata":{"name":"ssremailmeworkcom9a4c1","namespace":"102288994711","selfLink":"/apis/serving.knative.dev/v1/namespaces/102288994711/services/ssremailmeworkcom9a4c1","uid":"9a286be7-00a3-4c87-a18b-eeb4bc8e3349","resourceVersion":"AAX0PwUk9cI","generation":23,"labels":{"goog-managed-by":"cloudfunctions","goog-cloudfunctions-runtime":"nodejs18","cloud.googleapis.com/location":"us-central1"},"annotations":{"run.googleapis.com/client-name":"cli-firebase","serving.knative.dev/creator":"service-102288994711@gcf-admin-robot.iam.gserviceaccount.com","serving.knative.dev/lastModifier":"service-102288994711@gcf-admin-robot.iam.gserviceaccount.com","client.knative.dev/user-image":"us-central1-docker.pkg.dev/emailmework-com-9a4c1/gcf-artifacts/ssremailmeworkcom9a4c1:version_1","cloudfunctions.googleapis.com/function-id":"ssremailmeworkcom9a4c1","run.googleapis.com/operation-id":"d5a695d0-e80a-41d4-956c-84f24e06b46e","run.googleapis.com/ingress":"all","run.googleapis.com/ingress-status":"all"},"creationTimestamp":"2023-02-07T07:45:55.156255Z"},"spec":{"template":{"metadata":{"name":"ssremailmeworkcom9a4c1-00023-nok","annotations":{"run.googleapis.com/client-name":"cli-firebase","cloudfunctions.googleapis.com/trigger-type":"HTTP_TRIGGER","client.knative.dev/user-image":"us-central1-docker.pkg.dev/emailmework-com-9a4c1/gcf-artifacts/ssremailmeworkcom9a4c1:version_1","autoscaling.knative.dev/maxScale":"100","run.googleapis.com/cpu-throttling":"true","run.googleapis.com/startup-cpu-boost":"true"}},"spec":{"containerConcurrency":80,"timeoutSeconds":60,"serviceAccountName":"102288994711-compute@developer.gserviceaccount.com","containers":[{"image":"us-central1-docker.pkg.dev/emailmework-com-9a4c1/gcf-artifacts/ssremailmeworkcom9a4c1:version_1","env":[{"name":"__FIREBASE_FRAMEWORKS_ENTRY__","value":"next.js"},{"name":"__FIREBASE_DEFAULTS__","value":"{\"config\":{\"projectId\":\"emailmework-com-9a4c1\",\"appId\":\"1:102288994711:web:238a978abbeb276c0814d2\",\"databaseURL\":\"https://emailmework-com-9a4c1-default-rtdb.firebaseio.com\",\"storageBucket\":\"emailmework-com-9a4c1.appspot.com\",\"apiKey\":\"AIzaSyA1Z_AlDGABZqqXiQm9qYiCJ24im1DUNFQ\",\"authDomain\":\"emailmework-com-9a4c1.firebaseapp.com\",\"messagingSenderId\":\"102288994711\",\"measurementId\":\"G-DYV9TTV85L\"},\"_authTokenSyncURL\":\"/__session\"}"},{"name":"FIREBASE_CONFIG","value":"{\"projectId\":\"emailmework-com-9a4c1\",\"databaseURL\":\"https://emailmework-com-9a4c1-default-rtdb.firebaseio.com\",\"storageBucket\":\"emailmework-com-9a4c1.appspot.com\"}"},{"name":"GCLOUD_PROJECT","value":"emailmework-com-9a4c1"},{"name":"EVENTARC_CLOUD_EVENT_SOURCE","value":"projects/emailmework-com-9a4c1/locations/us-central1/services/ssremailmeworkcom9a4c1"}],"resources":{"limits":{"cpu":"1","memory":"256Mi"}},"ports":[{"name":"http1","containerPort":8080}]}]}},"traffic":[{"percent":100,"latestRevision":true}]},"status":{"observedGeneration":23,"conditions":[{"type":"Ready","status":"True","lastTransitionTime":"2023-02-09T07:06:29.854293Z"},{"type":"ConfigurationsReady","status":"True","lastTransitionTime":"2023-02-09T07:06:24.533446Z"},{"type":"RoutesReady","status":"True","lastTransitionTime":"2023-02-09T07:06:29.978562Z"}],"latestReadyRevisionName":"ssremailmeworkcom9a4c1-00023-nok","latestCreatedRevisionName":"ssremailmeworkcom9a4c1-00023-nok","traffic":[{"revisionName":"ssremailmeworkcom9a4c1-00023-nok","percent":100,"latestRevision":true}],"url":"https://ssremailmeworkcom9a4c1-hoqxyax34a-uc.a.run.app","address":{"url":"https://ssremailmeworkcom9a4c1-hoqxyax34a-uc.a.run.app"}}}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-02-09T07:58:20.587Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/run.googleapis.com [none]
+[debug] [2023-02-09T07:58:20.587Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/run.googleapis.com x-goog-quota-user=projects/emailmework-com-9a4c1
+[debug] [2023-02-09T07:58:20.590Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/eventarc.googleapis.com [none]
+[debug] [2023-02-09T07:58:20.590Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/eventarc.googleapis.com x-goog-quota-user=projects/emailmework-com-9a4c1
+[debug] [2023-02-09T07:58:20.592Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/pubsub.googleapis.com [none]
+[debug] [2023-02-09T07:58:20.592Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/pubsub.googleapis.com x-goog-quota-user=projects/emailmework-com-9a4c1
+[debug] [2023-02-09T07:58:20.593Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/storage.googleapis.com [none]
+[debug] [2023-02-09T07:58:20.593Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/storage.googleapis.com x-goog-quota-user=projects/emailmework-com-9a4c1
+[debug] [2023-02-09T07:58:21.111Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/pubsub.googleapis.com 200
+[debug] [2023-02-09T07:58:21.111Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-02-09T07:58:21.127Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/run.googleapis.com 200
+[debug] [2023-02-09T07:58:21.127Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[debug] [2023-02-09T07:58:21.145Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/storage.googleapis.com 200
+[debug] [2023-02-09T07:58:21.145Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-02-09T07:58:21.145Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/eventarc.googleapis.com 200
+[debug] [2023-02-09T07:58:21.146Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/emailmework-com-9a4c1/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-02-09T07:58:21.146Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/102288994711/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-02-09T07:58:21.147Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/102288994711/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-02-09T07:58:21.792Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/102288994711/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-02-09T07:58:21.794Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/102288994711/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-102288994711@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"102266425838342936225"}}
+[debug] [2023-02-09T07:58:21.811Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/102288994711/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-02-09T07:58:21.812Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/102288994711/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-102288994711@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"112145722736344297383"}}
+[debug] [2023-02-09T07:58:21.823Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emailmework-com-9a4c1 [none]
+[debug] [2023-02-09T07:58:22.168Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emailmework-com-9a4c1 200
+[debug] [2023-02-09T07:58:22.168Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emailmework-com-9a4c1 {"projectId":"emailmework-com-9a4c1","projectNumber":"102288994711","displayName":"emailmework-com","name":"projects/emailmework-com-9a4c1","resources":{"hostingSite":"emailmework-com-9a4c1","realtimeDatabaseInstance":"emailmework-com-9a4c1-default-rtdb"},"state":"ACTIVE","etag":"1_a980d5dd-361a-43d0-b774-92e627394a42"}
+[debug] [2023-02-09T07:58:22.171Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/emailmework-com-9a4c1/versions [none]
+[debug] [2023-02-09T07:58:22.171Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/emailmework-com-9a4c1/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-02-09T07:58:22.904Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/emailmework-com-9a4c1/versions 200
+[debug] [2023-02-09T07:58:22.905Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/emailmework-com-9a4c1/versions {"name":"projects/102288994711/sites/emailmework-com-9a4c1/versions/a9e7b2e88ba6d75b","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-02-09T07:58:22.916Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1/releases pageSize=10&pageToken=
+[debug] [2023-02-09T07:58:22.918Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/emailmework-com-9a4c1/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2023-02-09T07:58:23.364Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1/releases 200
+[debug] [2023-02-09T07:58:23.364Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1/releases {"releases":[{"name":"projects/emailmework-com-9a4c1/releases/cloud.firestore","rulesetName":"projects/emailmework-com-9a4c1/rulesets/dcba376d-9108-40a7-a636-a2d6877643ac","createTime":"2023-02-07T05:39:58.326725Z","updateTime":"2023-02-09T07:03:08.670932Z"}]}
+[debug] [2023-02-09T07:58:23.365Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1/rulesets/dcba376d-9108-40a7-a636-a2d6877643ac [none]
+[debug] [2023-02-09T07:58:23.473Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/emailmework-com-9a4c1/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2023-02-09T07:58:23.474Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/emailmework-com-9a4c1/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2023-02-09T07:58:23.475Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/emailmework-com-9a4c1/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2023-02-09T07:58:23.861Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1/rulesets/dcba376d-9108-40a7-a636-a2d6877643ac 200
+[debug] [2023-02-09T07:58:23.861Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/emailmework-com-9a4c1/rulesets/dcba376d-9108-40a7-a636-a2d6877643ac [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[debug] [2023-02-09T07:58:23.940Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/emailmework-com-9a4c1/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2023-02-09T07:58:23.940Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/emailmework-com-9a4c1/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/emailmework-com-9a4c1/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully 
+[debug] [2023-02-09T07:58:23.945Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/emailmework-com-9a4c1/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-02-09T07:58:24.462Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/emailmework-com-9a4c1/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-02-09T07:58:24.462Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/emailmework-com-9a4c1/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-102288994711-us-central1/7183af24-b3fb-4f06-9013-74af5b501e73.zip?GoogleAccessId=service-102288994711@gcf-admin-robot.iam.gserviceaccount.com&Expires=1675931304&Signature=Bkejab3K4mnpo6FnXduF4GyrDElyg%2B%2FCHzF94a9pM9cC5HHqixumsWhIimZAm63JmfGwLArmlG6rfajHacrUy1RFS4mxo9GHOH6FarYV6l9bwtNVmrlPcm1t%2BvgMTQDrmW5K%2BUCwiRgS88R21VQLhZtoYgH6UxHDbIQrIbgkZ5TR%2FQ9k8n3Mi3A%2FSMwppo6XW8fDAggBWOF2beKoTGT09aBXumGAR5v8y%2F0guN1KveNw7fFPnRPRoFUroVowF1uRnYTG%2Bh%2BSU6XmMplbcUnHlIrS8diLrjE071zJhsZPw3kKlVm5SM6Of4ZVEX4H3dBWAoYfE0BczwUX33AkKydddw%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-102288994711-us-central1","object":"7183af24-b3fb-4f06-9013-74af5b501e73.zip"}}
+[debug] [2023-02-09T07:58:24.464Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-102288994711-us-central1/7183af24-b3fb-4f06-9013-74af5b501e73.zip GoogleAccessId=service-102288994711%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1675931304&Signature=Bkejab3K4mnpo6FnXduF4GyrDElyg%2B%2FCHzF94a9pM9cC5HHqixumsWhIimZAm63JmfGwLArmlG6rfajHacrUy1RFS4mxo9GHOH6FarYV6l9bwtNVmrlPcm1t%2BvgMTQDrmW5K%2BUCwiRgS88R21VQLhZtoYgH6UxHDbIQrIbgkZ5TR%2FQ9k8n3Mi3A%2FSMwppo6XW8fDAggBWOF2beKoTGT09aBXumGAR5v8y%2F0guN1KveNw7fFPnRPRoFUroVowF1uRnYTG%2Bh%2BSU6XmMplbcUnHlIrS8diLrjE071zJhsZPw3kKlVm5SM6Of4ZVEX4H3dBWAoYfE0BczwUX33AkKydddw%3D%3D
+[debug] [2023-02-09T07:58:24.464Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-102288994711-us-central1/7183af24-b3fb-4f06-9013-74af5b501e73.zip [stream]
