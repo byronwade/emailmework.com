@@ -8,7 +8,6 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "@/firebase";
 
 export default function Test() {
-	const router = useRouter();
 	const { data: session } = useSession();
 
 	/* const [users, loading, error] = useCollection(session && collection(db));  */
@@ -22,8 +21,6 @@ export default function Test() {
 				createdAt: serverTimestamp(),
 			}
 		);
-
-		router.push(`/chat/${doc.id}`);
 	};
 	return (
 		<div onClick={createNewChat}>
