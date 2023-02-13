@@ -25,6 +25,5 @@ export default function RootLayout({
           </RecoilRoot>
         </body>
       </html>
-   
   )
 }

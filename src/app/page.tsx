@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import SessionProvider from './componenets/SessionProvider'
 import {getServerSession} from "next-auth"
 import { authOptions } from '../pages/api/auth/[...nextauth]';
@@ -23,3 +24,13 @@ export default async function Home() {
 		</SessionProvider>
 	</div>);
 }
+=======
+
+export default async function Home() {
+	return (
+		<div>
+			<div>home page</div>
+		</div>
+	);
+}
+>>>>>>> b9e6453f

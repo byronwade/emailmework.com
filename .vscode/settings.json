@@ -1,4 +1,10 @@
 {
+<<<<<<< HEAD
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true
+=======
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "compile-hero.disable-compile-files-on-did-save-code": true
+>>>>>>> b9e6453f
 }
