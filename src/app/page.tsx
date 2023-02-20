@@ -3,6 +3,7 @@ import { collection, getDocs, onSnapshot } from "firebase/firestore";
 import type { DocumentData } from "firebase/firestore";
 import { db } from "../../firebase.js";
 import { useState, useEffect } from "react";
+import Header from "./components/Header/Header";
 
 export default function Home() {
 	const [adminUsers, setAdminUsers] = useState<DocumentData[]>([]);
@@ -20,13 +21,16 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div>
-			{adminUsers.map((user) => (
-				<div key={user.admin_id}>
-					<h2 className="h2">{user.name}</h2>
-					<p>{user.email}</p>
-				</div>
-			))}
-		</div>
+		<>
+			<Header />
+			<div>
+				{adminUsers.map((user) => (
+					<div key={user.admin_id}>
+						<h2 className="h2">{user.name}</h2>
+						<p>{user.email}</p>
+					</div>
+				))}
+			</div>
+		</>
 	);
 }

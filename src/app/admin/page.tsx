@@ -1,27 +1,27 @@
-import SessionProvider from "../componenets/SessionProvider";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../../pages/api/auth/[...nextauth]";
-import Login from "../componenets/Login/Login";
-import Logout from "../componenets/Logout/Logout";
-import Test from "../componenets/Test";
-import Header from "../componenets/Header/Header";
+"use client";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
+import Test from "../components/Test";
+import Header from "../components/Header/Header";
 
-export default async function Home() {
-	const session = await getServerSession(authOptions);
+export default function Companies() {
+	const { data: session, status } = useSession();
+	const router = useRouter();
+
+	if (status === "loading") {
+		return <div>Loading...</div>;
+	}
+
+	if (session === null) {
+		router.push("/login");
+		return <div>Redirecting to login...</div>;
+	}
 	return (
 		<div>
 			<Header />
-			<SessionProvider session={session}>
-				{!session ? (
-					<Login />
-				) : (
-					<div>
-						<Logout />
-						<hr />
-						<Test />
-					</div>
-				)}
-			</SessionProvider>
+			<div>
+				<Test />
+			</div>
 		</div>
 	);
 }
