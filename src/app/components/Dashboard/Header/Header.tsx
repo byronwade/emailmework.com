@@ -4,6 +4,7 @@ import { useUser } from "../../../hooks/useUser";
 
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
@@ -24,14 +25,16 @@ export default function Nav({ navigation, userNavigation }) {
 							<div className="flex h-16 justify-between">
 								<div className="flex">
 									<div className="flex flex-shrink-0 items-center">
-										<img className="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
-										<img className="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+										<Link href="/">
+											<img className="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+											<img className="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+										</Link>
 									</div>
 									<div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
 										{navigation.map((item) => (
-											<a key={item.name} href={item.href} className={classNames(item.current ? "border-indigo-500 text-gray-900" : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700", "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium")} aria-current={item.current ? "page" : undefined}>
+											<Link key={item.name} href={item.href} className={classNames(item.current ? "border-indigo-500 text-gray-900" : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700", "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium")} aria-current={item.current ? "page" : undefined}>
 												{item.name}
-											</a>
+											</Link>
 										))}
 									</div>
 								</div>
@@ -54,9 +57,9 @@ export default function Nav({ navigation, userNavigation }) {
 												{userNavigation.map((item) => (
 													<Menu.Item key={item.name}>
 														{({ active }) => (
-															<a onClick={item.onClick ? () => signOut() : undefined} href={item.href} className={classNames(active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700")}>
+															<Link onClick={item.onClick ? () => signOut() : undefined} href={item.href} className={classNames(active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700")}>
 																{item.name}
-															</a>
+															</Link>
 														)}
 													</Menu.Item>
 												))}

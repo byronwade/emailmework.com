@@ -1,7 +1,7 @@
 const navigation = [
 	{ name: "Dashboard", href: "/dashboard/admin", current: true },
 	{ name: "Jobs", href: "/dashboard/admin/jobs", current: false },
-	{ name: "Company Profiles", href: "/dashboard/admin/companyprofiles", current: false },
+	{ name: "Companies", href: "/dashboard/admin/companies", current: false },
 	{ name: "Orders", href: "/dashboard/admin/orders", current: false },
 	{ name: "Settings", href: "/dashboard/admin/settings", current: false },
 ];
