@@ -3,7 +3,7 @@ import { collection, getDocs, onSnapshot } from "firebase/firestore";
 import type { DocumentData } from "firebase/firestore";
 import { db } from "../../firebase.js";
 import { useState, useEffect } from "react";
-import Header from "./components/Header/Header";
+import Header from "@components/Website/Header/Header";
 
 export default function Home() {
 	const [adminUsers, setAdminUsers] = useState<DocumentData[]>([]);

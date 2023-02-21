@@ -1,10 +1,7 @@
 "use client"
-import './globals.css'
-import { ChakraProvider } from '@chakra-ui/react'
-import {
-  RecoilRoot
-} from 'recoil';
-import SessionProvider from "./components/SessionProvider";
+import "./globals.css";
+import { RecoilRoot } from "recoil";
+import SessionProvider from "./SessionProvider";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
@@ -16,9 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<head />
 			<body>
 				<SessionProvider>
-					<RecoilRoot>
-						<ChakraProvider>{children}</ChakraProvider>
-					</RecoilRoot>
+					<RecoilRoot>{children}</RecoilRoot>
 				</SessionProvider>
 			</body>
 		</html>
