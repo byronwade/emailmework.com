@@ -1,55 +1,70 @@
 "use client";
-import Test from "@components/Test";
+import PageHeader from "@/src/app/components/Dashboard/PageHeader/PageHeader";
+import { orders, breadTrail, buttons } from "./ordersConfig";
 
 export default function Jobs() {
 	return (
-		<div className="py-10">
-			<header>
-				<div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
-					<h1 className="text-3xl font-bold leading-tight tracking-tight text-gray-900">Orders</h1>
-				</div>
-			</header>
-			<main>
-				<div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
-					<div className="relative flex flex-col">
-						{/* 3 column wrapper */}
-						<div className="mx-auto w-full flex-grow lg:flex">
-							{/* Left sidebar & main wrapper */}
-							<div className="min-w-0 flex-1 bg-white xl:flex">
-								<div className="bg-white xl:w-64 xl:flex-shrink-0">
-									<div className="h-full py-6 pl-4 pr-6 sm:pl-6 lg:pl-8 xl:pl-0">
-										{/* Start left column area */}
-										<div className="relative h-full" style={{ minHeight: "12rem" }}>
-											<div className="absolute inset-0 rounded-lg border-2 border-dashed border-gray-200" />
-										</div>
-										{/* End left column area */}
-									</div>
-								</div>
+		<div className="bg-white">
+			<div className="mx-auto w-8/12 px-4 py-16 sm:px-6 sm:py-24">
+				{/* The page Header for the website */}
+				<PageHeader pageTitle="Jobs" buttons={buttons} breadTrail={breadTrail} />
 
-								<div className="bg-white lg:min-w-0 lg:flex-1">
-									<div className="h-full py-6 px-4 sm:px-6 lg:px-8">
-										{/* Start main area*/}
-										<div className="relative h-full" style={{ minHeight: "36rem" }}>
-											<div className="absolute inset-0 rounded-lg border-2 border-dashed border-gray-200" />
+				<div className="mt-12 space-y-16 sm:mt-16">
+					{orders.map((order) => (
+						<section key={order.number} aria-labelledby={`${order.number}-heading`}>
+							<div className="space-y-1 md:flex md:items-baseline md:space-y-0 md:space-x-4">
+								<h2 id={`${order.number}-heading`} className="text-lg font-medium text-gray-900 md:flex-shrink-0">
+									Order #{order.number}
+								</h2>
+								<div className="space-y-5 sm:flex sm:items-baseline sm:justify-between sm:space-y-0 md:min-w-0 md:flex-1">
+									<p className="text-sm font-medium text-gray-500">{order.status}</p>
+									<div className="flex text-sm font-medium">
+										<a href={order.href} className="text-indigo-600 hover:text-indigo-500">
+											Manage order
+										</a>
+										<div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
+											<a href={order.invoiceHref} className="text-indigo-600 hover:text-indigo-500">
+												View Invoice
+											</a>
 										</div>
-										{/* End main area */}
 									</div>
 								</div>
 							</div>
 
-							<div className="pr-4 sm:pr-6 lg:flex-shrink-0 lg:pr-8 xl:pr-0">
-								<div className="h-full py-6 pl-6 lg:w-80">
-									{/* Start right column area */}
-									<div className="relative h-full" style={{ minHeight: "16rem" }}>
-										<div className="absolute inset-0 rounded-lg border-2 border-dashed border-gray-200" />
+							<div className="mt-6 -mb-6 flow-root divide-y divide-gray-200 border-t border-gray-200">
+								{order.products.map((product) => (
+									<div key={product.id} className="py-6 sm:flex">
+										<div className="flex space-x-4 sm:min-w-0 sm:flex-1 sm:space-x-6 lg:space-x-8">
+											<img src={product.imageSrc} alt={product.imageAlt} className="h-20 w-20 flex-none rounded-md object-cover object-center sm:h-48 sm:w-48" />
+											<div className="min-w-0 flex-1 pt-1.5 sm:pt-0">
+												<h3 className="text-sm font-medium text-gray-900">
+													<a href={product.href}>{product.name}</a>
+												</h3>
+												<p className="truncate text-sm text-gray-500">
+													<span>{product.color}</span>{" "}
+													<span className="mx-1 text-gray-400" aria-hidden="true">
+														&middot;
+													</span>{" "}
+													<span>{product.size}</span>
+												</p>
+												<p className="mt-1 font-medium text-gray-900">{product.price}</p>
+											</div>
+										</div>
+										<div className="mt-6 space-y-4 sm:mt-0 sm:ml-6 sm:w-40 sm:flex-none">
+											<button type="button" className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-2.5 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-full sm:flex-grow-0">
+												Buy again
+											</button>
+											<button type="button" className="flex w-full items-center justify-center rounded-md border border-gray-300 bg-white py-2 px-2.5 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-full sm:flex-grow-0">
+												Shop similar
+											</button>
+										</div>
 									</div>
-									{/* End right column area */}
-								</div>
+								))}
 							</div>
-						</div>
-					</div>
+						</section>
+					))}
 				</div>
-			</main>
+			</div>
 		</div>
 	);
 }
