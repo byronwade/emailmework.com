@@ -25,17 +25,12 @@ const solutions = [
 		icon: Squares2X2Icon,
 	},
 ];
-const callsToAction = [
-	{ name: "Watch Demo", href: "#", icon: PlayIcon },
-	{ name: "View All Products", href: "#", icon: CheckCircleIcon },
-	{ name: "Contact Sales", href: "#", icon: PhoneIcon },
-];
 const company = [
-	{ name: "About", href: "#", icon: InformationCircleIcon },
-	{ name: "Customers", href: "#", icon: BuildingOfficeIcon },
-	{ name: "Press", href: "#", icon: NewspaperIcon },
-	{ name: "Careers", href: "#", icon: BriefcaseIcon },
-	{ name: "Privacy", href: "#", icon: ShieldCheckIcon },
+	{ name: "Plumbing", href: "#", icon: InformationCircleIcon },
+	{ name: "Septic", href: "#", icon: BuildingOfficeIcon },
+	{ name: "Electrical", href: "#", icon: NewspaperIcon },
+	{ name: "Sheetrock", href: "#", icon: BriefcaseIcon },
+	{ name: "Web Design", href: "#", icon: ShieldCheckIcon },
 ];
 const resources = [
 	{ name: "Community", href: "#", icon: UserGroupIcon },
