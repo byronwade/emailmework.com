@@ -1,5 +1,5 @@
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "./firebase.js";
+import { db } from "../firebase.js";
 import { faker } from "@faker-js/faker";
 import { v4 as uuidv4 } from "uuid";
 
@@ -181,4 +181,3 @@ addDoc(paymentsCollection, {
 
 // Output success message
 console.log("Firebase database created successfully!");
-
