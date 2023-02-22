@@ -13,7 +13,7 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
 }
 
-export default function Jobs() {
+export default function Settings() {
 	return (
 		<div className="py-10">
 			<main>

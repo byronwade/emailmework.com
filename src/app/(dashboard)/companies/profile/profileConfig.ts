@@ -104,15 +104,15 @@ const breadTrail = [
 	},
 	{
 		name: "Jobs",
-		link: "/dashboard/companies/orders",
+		link: "/companies/orders",
 	},
 	{
 		name: "Jobs",
-		link: "/dashboard/companies/orders",
+		link: "/companies/orders",
 	},
 	{
 		name: "Jobs",
-		link: "/dashboard/companies/orders",
+		link: "/companies/orders",
 	},
 ];
 

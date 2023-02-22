@@ -1,5 +1,5 @@
 "use client";
-import PageHeader from "@/src/app/components/Dashboard/PageHeader/PageHeader";
+import PageHeader from "@/src/app/components/PageHeader/PageHeader";
 import { orders, breadTrail, buttons } from "./ordersConfig";
 
 export default function Jobs() {
