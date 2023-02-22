@@ -74,7 +74,7 @@ const jobData = {
 	influencers: {
 		qualityOfWriting: {
 			weight: 90,
-			data: 1,
+			data: 100,
 			range: [0, 100],
 		},
 		keywords: {
@@ -84,7 +84,7 @@ const jobData = {
 		},
 		dataPosted: {
 			weight: 90,
-			data: 1,
+			data: 50,
 			range: [0, 100], //range end will be the most jobs they have accepted
 		},
 	},
