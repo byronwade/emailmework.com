@@ -27,6 +27,6 @@
 			"@common/*": ["src/app/components/Common/*"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "playground/db.js", "firebase.js", "firebase.js"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "db.js", "firebase.js", "firebase.js"],
 	"exclude": ["node_modules"]
 }
