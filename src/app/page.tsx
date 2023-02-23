@@ -1,9 +1,27 @@
 "use client";
-import { collection, getDocs, onSnapshot } from "firebase/firestore";
-import type { DocumentData } from "firebase/firestore";
-import { db } from "../../firebase.js";
-import { useState, useEffect } from "react";
 import Header from "@components/Website/Header/Header";
+import { useQuery, gql } from "@apollo/client";
+
+const GET_CLIENTS = gql`
+	query {
+		clientsCollection {
+			edges {
+				node {
+					name
+					email
+					password
+					created_at
+					updated_at
+					phone_number
+					profile_picture
+					location
+					preferred_location
+					score
+				}
+			}
+		}
+	}
+`;
 
 const faqs = [
 	{
@@ -34,29 +52,31 @@ const faqs = [
 	// More questions...
 ];
 
+const adminUsers = [
+	{
+		admin_id: "q324152345",
+		name: "Byron Wade",
+		email: "bc1995@gmail.com",
+	},
+];
+
 export default function Home() {
-	const [adminUsers, setAdminUsers] = useState<DocumentData[]>([]);
+	const { loading, error, data } = useQuery(GET_CLIENTS);
 
-	useEffect(() => {
-		const unsub = onSnapshot(collection(db, "Admin Users"), (snapshot) => {
-			const adminUsersData = snapshot.docs.map((doc) => ({
-				id: doc.id,
-				...doc.data(),
-			}));
-			setAdminUsers(adminUsersData);
-		});
+	if (loading) return <p>Loading...</p>;
+	if (error) return <p>Error : {error.message}</p>;
+	console.log(data.clientsCollection.edges);
 
-		return unsub;
-	}, []);
+	const clients = data.clientsCollection.edges;
 
 	return (
 		<>
 			<Header />
 			<div>
-				{adminUsers.map((user) => (
-					<div key={user.admin_id}>
-						<h2 className="h2">{user.name}</h2>
-						<p>{user.email}</p>
+				{clients.map((user) => (
+					<div key={user.node.preferred_location}>
+						<h2 className="h2">{user.node.name}</h2>
+						<p>{user.node.email}</p>
 					</div>
 				))}
 			</div>

@@ -2,6 +2,8 @@
 import "./globals.css";
 import { RecoilRoot } from "recoil";
 import SessionProvider from "./SessionProvider";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "../../supabase.js";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
@@ -12,9 +14,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         */}
 			<head />
 			<body>
-				<SessionProvider>
-					<RecoilRoot>{children}</RecoilRoot>
-				</SessionProvider>
+				<ApolloProvider client={client}>
+					<SessionProvider>
+						<RecoilRoot>{children}</RecoilRoot>
+					</SessionProvider>
+				</ApolloProvider>
 			</body>
 		</html>
 	);
