@@ -6,8 +6,12 @@
 			{
 				"root": ["."],
 				"alias": {
-					"@components": "./src/app/components",
-					"@common": "./src/app/components/Common"
+					"@hooks": "./src/hooks",
+					"@recoil": "./src/app/recoil",
+					"@components": "./src/components",
+					"@dashboard": "./src/components/Dashboard",
+					"@website": "./src/components/Website",
+					"@common": "./src/components/Common"
 				}
 			}
 		]

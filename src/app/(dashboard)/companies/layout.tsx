@@ -1,4 +1,4 @@
-import Header from "@components/Dashboard/Header/Header";
+import Header from "@dashboard/Header/Header";
 import { navigation, userNavigation } from "./companiesConfig";
 
 export default function CompaniesLayout({ children }) {

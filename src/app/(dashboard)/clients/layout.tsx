@@ -1,4 +1,4 @@
-import Header from "@components/Dashboard/Header/Header";
+import Header from "@/src/components/Dashboard/Header/Header";
 import { navigation, userNavigation } from "./clientsConfig";
 
 export default function ClientsLayout({ children }) {

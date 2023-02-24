@@ -1,6 +1,6 @@
 "use client";
 import { PlusIcon } from "@heroicons/react/20/solid";
-import Test from "@components/Test";
+import Test from "@/src/components/Test";
 
 export default function Jobs() {
 	return (

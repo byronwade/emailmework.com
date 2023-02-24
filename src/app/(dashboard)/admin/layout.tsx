@@ -1,4 +1,4 @@
-import Header from "@components/Dashboard/Header/Header";
+import Header from "@/src/components/Dashboard/Header/Header";
 import { navigation, userNavigation } from "./adminConfig";
 
 export default function AdminLayout({ children }) {

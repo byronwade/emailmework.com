@@ -23,8 +23,8 @@
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./*"],
-			"@components/*": ["src/app/components/*"],
-			"@common/*": ["src/app/components/Common/*"]
+			"@components/*": ["src/components/*"],
+			"@common/*": ["src/components/Common/*"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "firebase/db.js", "firebase/firebase.js", "firebase/firebase.js"],

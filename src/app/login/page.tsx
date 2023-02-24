@@ -1,6 +1,6 @@
 "use client";
 import { signIn } from "next-auth/react";
-import Header from "@components/Website/Header/Header";
+import Header from "@/src/components/Website/Header/Header";
 
 export default function Login() {
 	return (

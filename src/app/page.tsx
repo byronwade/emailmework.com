@@ -1,5 +1,5 @@
 "use client";
-import Header from "@components/Website/Header/Header";
+import Header from "@/src/components/Website/Header/Header";
 import { useQuery, gql } from "@apollo/client";
 
 const GET_CLIENTS = gql`
