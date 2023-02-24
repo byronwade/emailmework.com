@@ -1,7 +1,12 @@
 import Header from "@/src/components/Dashboard/Header/Header";
 import { navigation, userNavigation } from "./adminConfig";
+import { ReactNode } from "react";
 
-export default function AdminLayout({ children }) {
+interface AdminLayoutProps {
+	children: ReactNode;
+}
+
+export default function AdminLayout({ children }: AdminLayoutProps) {
 	return (
 		<>
 			<Header navigation={navigation} userNavigation={userNavigation} />
