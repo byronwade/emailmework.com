@@ -286,13 +286,13 @@ Use this space to list resources you find helpful and would like to give credit 
 
 
 
-<p>The goal of the Job Scores collection is to provide a system for sorting and ranking jobs based on their relevance to a particular client. The relevance score is calculated using a set of algorithms and formulas that take into account various factors that affect the suitability of a job for a particular client. These factors may include the job location, budget, equipment required, the client's past job history, and any other relevant information that can impact the relevance of the job.
+<p>The goal of the Scores collection is to provide a system for sorting and ranking jobs based on their relevance to a particular client. The relevance score is calculated using a set of algorithms and formulas that take into account various factors that affect the suitability of a job for a particular client. These factors may include the job location, budget, equipment required, the client's past job history, and any other relevant information that can impact the relevance of the job.
 
-The algorithm uses this information to calculate a relevance score for each job, which is then stored in the Job Scores collection along with the job ID, client ID, and a timestamp of when the score was calculated. The relevance scores are updated dynamically, as new information becomes available, to ensure that the most relevant jobs are always displayed at the top of the list for a particular client.
+The algorithm uses this information to calculate a relevance score for each job, which is then stored in the Scores collection along with the job ID, client ID, and a timestamp of when the score was calculated. The relevance scores are updated dynamically, as new information becomes available, to ensure that the most relevant jobs are always displayed at the top of the list for a particular client.
 
 The sorting and ranking of jobs based on their relevance scores can help to improve the efficiency and accuracy of the job search process for clients, as it provides them with a customized and relevant list of job options. This can lead to better job matches, higher client satisfaction, and a more efficient use of time and resources for both clients and companies.
 
-The Job Scores collection is an essential part of the job search and placement process, providing valuable insights and information that can be used to improve the overall experience for clients and companies.
+The Scores collection is an essential part of the job search and placement process, providing valuable insights and information that can be used to improve the overall experience for clients and companies.
 
 The algorithm uses a weighted average approach to calculate the relevance scores. Each factor is assigned a weight, which represents its importance in determining the relevance of the job. For example, the job location may have a higher weight compared to the budget as it is more important for some clients. The weightings are determined based on statistical analysis of previous job search patterns and preferences of clients.
 
