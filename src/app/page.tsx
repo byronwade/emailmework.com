@@ -65,11 +65,11 @@ export default function Home() {
 		<>
 			<Header />
 			<div>
-				{clients.map(({ node: { name, email, preferred_location, scoresCollection } }) => (
+				{clients.map(({ node: { name, email, preferred_location, scoresCollection } }: { node: { name: string; email: string; preferred_location: string; scoresCollection: any } }) => (
 					<div key={preferred_location}>
 						<h2 className="h2">{name}</h2>
 						<p>{email}</p>
-						{scoresCollection.edges.map(({ node: { score } }) => (
+						{scoresCollection.edges.map(({ node: { score } }: { node: { score: number } }) => (
 							<div key={score}>{score}</div>
 						))}
 					</div>

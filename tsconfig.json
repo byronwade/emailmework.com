@@ -23,7 +23,11 @@
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./*"],
+			"@hooks/*": ["src/hooks/*"],
+			"@recoil/*": ["src/recoil/*"],
 			"@components/*": ["src/components/*"],
+			"@dashboard/*": ["src/components/Dashboard/*"],
+			"@website/*": ["src/components/Website/*"],
 			"@common/*": ["src/components/Common/*"]
 		}
 	},

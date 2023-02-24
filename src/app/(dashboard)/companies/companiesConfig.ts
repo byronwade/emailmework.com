@@ -1,15 +1,22 @@
-const navigation = [
-	{ name: "Dashboard", href: "/companies", current: true },
-	{ name: "Work", href: "/companies/work", current: false },
-	{ name: "Orders", href: "/companies/orders", current: false },
-	{ name: "Profile", href: "/companies/profile", current: false },
-	{ name: "Settings", href: "/companies/settings", current: false },
+interface NavigationItem {
+	name: string;
+	href: string;
+	current: boolean;
+	onClick: boolean;
+}
+
+const navigation: NavigationItem[] = [
+	{ name: "Dashboard", href: "/companies", onClick: true, current: true },
+	{ name: "Work", href: "/companies/work", onClick: true, current: false },
+	{ name: "Orders", href: "/companies/orders", onClick: true, current: false },
+	{ name: "Profile", href: "/companies/profile", onClick: true, current: false },
+	{ name: "Settings", href: "/companies/settings", onClick: true, current: false },
 ];
 
-const userNavigation = [
-	{ name: "Your Profile", href: "#", onClick: true },
-	{ name: "Settings", href: "#", onClick: true },
-	{ name: "Sign out", href: "#", onClick: true },
+const userNavigation: NavigationItem[] = [
+	{ name: "Your Profile", href: "#", onClick: true, current: false },
+	{ name: "Settings", href: "#", onClick: true, current: false },
+	{ name: "Sign out", href: "#", onClick: true, current: false },
 ];
 
 export { navigation, userNavigation };

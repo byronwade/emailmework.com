@@ -1,7 +1,12 @@
 import Header from "@/src/components/Dashboard/Header/Header";
+import { ReactNode } from "react";
 import { navigation, userNavigation } from "./clientsConfig";
 
-export default function ClientsLayout({ children }) {
+interface ClientLayoutProps {
+	children: ReactNode;
+}
+
+export default function ClientLayout({ children }: ClientLayoutProps) {
 	return (
 		<>
 			<Header navigation={navigation} userNavigation={userNavigation} />
@@ -9,3 +14,4 @@ export default function ClientsLayout({ children }) {
 		</>
 	);
 }
+

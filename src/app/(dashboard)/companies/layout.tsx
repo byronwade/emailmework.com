@@ -1,7 +1,12 @@
 import Header from "@dashboard/Header/Header";
+import { ReactNode } from "react";
 import { navigation, userNavigation } from "./companiesConfig";
 
-export default function CompaniesLayout({ children }) {
+interface CompaniesLayoutProps {
+	children: ReactNode;
+}
+
+export default function CompaniesLayout({ children }: CompaniesLayoutProps) {
 	return (
 		<>
 			<Header navigation={navigation} userNavigation={userNavigation} />

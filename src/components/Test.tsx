@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 import Image from "next/image";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "@/firebase";
+import { db } from "../../firebase/firebase";
 
 export default function Test() {
 	const { data: session } = useSession();

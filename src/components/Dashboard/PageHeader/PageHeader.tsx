@@ -1,8 +1,19 @@
 "use client";
 import Link from "next/link";
+import { Key, ReactElement, JSXElementConstructor, ReactFragment } from "react";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 
-export default function PageHeader({ pageTitle, buttons, breadTrail }) {
+interface PageHeaderProps {
+	pageTitle: string;
+	buttons: {
+		name: string;
+		link: any;
+		color: string;
+	}[];
+	breadTrail: any;
+}
+
+export default function PageHeader({ pageTitle, buttons, breadTrail }: PageHeaderProps) {
 	return (
 		<div>
 			<Breadcrumb breadTrail={breadTrail} />

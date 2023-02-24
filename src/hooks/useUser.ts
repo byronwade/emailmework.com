@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { useSession } from "next-auth/react";

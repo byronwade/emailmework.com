@@ -1,4 +1,5 @@
-"use client"
+// @ts-nocheck
+"use client";
 import "./globals.css";
 import { RecoilRoot } from "recoil";
 import SessionProvider from "./SessionProvider";

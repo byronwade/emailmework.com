@@ -6,11 +6,23 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(" ");
 }
 
-export default function Nav({ navigation, userNavigation }) {
+interface NavigationItem {
+	name: string;
+	href: string;
+	current?: boolean;
+	onClick?: boolean;
+}
+
+type NavProps = {
+	navigation: NavigationItem[];
+	userNavigation: NavigationItem[];
+};
+
+export default function Nav({ navigation, userNavigation }: NavProps) {
 	const user = useUser();
 	console.log(user);
 	if (!user) {
