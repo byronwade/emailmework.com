@@ -4,19 +4,19 @@ import { useQuery, gql } from "@apollo/client";
 
 const GET_CLIENTS = gql`
 	query {
-		clientsCollection {
+		clientsCollection(first: 100) {
 			edges {
 				node {
+					scoresCollection(first: 1) {
+						edges {
+							node {
+								score
+							}
+						}
+					}
+					preferred_location
 					name
 					email
-					password
-					created_at
-					updated_at
-					phone_number
-					profile_picture
-					location
-					preferred_location
-					score
 				}
 			}
 		}
@@ -52,31 +52,26 @@ const faqs = [
 	// More questions...
 ];
 
-const adminUsers = [
-	{
-		admin_id: "q324152345",
-		name: "Byron Wade",
-		email: "bc1995@gmail.com",
-	},
-];
-
 export default function Home() {
 	const { loading, error, data } = useQuery(GET_CLIENTS);
 
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error : {error.message}</p>;
-	console.log(data.clientsCollection.edges);
 
 	const clients = data.clientsCollection.edges;
+	console.log(clients);
 
 	return (
 		<>
 			<Header />
 			<div>
-				{clients.map((user) => (
-					<div key={user.node.preferred_location}>
-						<h2 className="h2">{user.node.name}</h2>
-						<p>{user.node.email}</p>
+				{clients.map(({ node: { name, email, preferred_location, scoresCollection } }) => (
+					<div key={preferred_location}>
+						<h2 className="h2">{name}</h2>
+						<p>{email}</p>
+						{scoresCollection.edges.map(({ node: { score } }) => (
+							<div key={score}>{score}</div>
+						))}
 					</div>
 				))}
 			</div>
