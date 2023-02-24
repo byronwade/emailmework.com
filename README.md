@@ -217,7 +217,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Byron Wade - [@your_twitter](https://twitter.com/byron_c_wade) - bcw1995@gmail.com
+Byron Wade - [@byron_c_wade](https://twitter.com/byron_c_wade) - bcw1995@gmail.com
 
 <!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
 

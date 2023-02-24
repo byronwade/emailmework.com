@@ -2,7 +2,7 @@
 import type { NextSeoProps } from 'next-seo';
 
 export const NEXT_SEO_DEFAULT: NextSeoProps = {
-  title: 'Emailmework',
+  title: 'Email Me Work',
   description: 'Emailmework.com is a platform connecting companies and customers with in-depth profiles, sophisticated rating algorithm for fair matching, and job ratings for quality. Eliminates limitations of traditional job boards and fosters respectful community.',
   openGraph: {
     type: 'website',
