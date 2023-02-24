@@ -1,13 +1,13 @@
 "use client";
 import { CheckIcon } from "@heroicons/react/20/solid";
-import Header from "../../components/Website/Header/Header";
+import WebsitePagesLayout from "../WebsitePagesLayout";
 
 const includedFeatures = ["Private forum access", "Member resources", "Entry to annual conference", "Official member t-shirt"];
 
 export default function Pricing() {
 	return (
 		<>
-			<Header />
+			<WebsitePagesLayout>
 			<div className="bg-white py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl sm:text-center">
@@ -49,6 +49,7 @@ export default function Pricing() {
 					</div>
 				</div>
 			</div>
+			</WebsitePagesLayout>
 		</>
 	);
 }

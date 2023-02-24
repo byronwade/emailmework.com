@@ -1,5 +1,5 @@
 "use client";
-import Header from "@website/Header/Header";
+import WebsitePagesLayout from "../WebsitePagesLayout";
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon, CheckIcon } from "@heroicons/react/20/solid";
 
 const features1 = [
@@ -49,7 +49,7 @@ const features2 = [
 export default function Features() {
 	return (
 		<>
-			<Header />
+			<WebsitePagesLayout>
 			<section className="overflow-hidden bg-gray-900 py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -97,6 +97,7 @@ export default function Features() {
 					</div>
 				</div>
 			</section>
+			</WebsitePagesLayout>
 		</>
 	);
 }

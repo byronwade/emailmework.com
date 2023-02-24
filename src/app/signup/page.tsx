@@ -1,7 +1,7 @@
 "use client";
 import { signIn } from "next-auth/react";
 
-export default function Login() {
+export default function SignUp() {
 	return (
 		<>
 			{/* <div>
@@ -9,7 +9,7 @@ export default function Login() {
 				<button onClick={() => signIn("github")}>sign in github</button>
 				<button onClick={() => signIn("facebook")}>sign in facebook</button>
 			</div> */}
-			<div className="flex h-[calc(100vh-74px)]">
+			<div className="flex h-[calc(100vh)]">
 				<div className="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
 					<div className="mx-auto w-full max-w-sm lg:w-96">
 						<div>
