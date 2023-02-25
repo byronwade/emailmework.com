@@ -51,3 +51,12 @@ functions/lib/
 
 .env
 .env.*
+
+# Sentry
+.sentryclirc
+
+# Sentry
+next.config.original.js
+
+# Sentry
+next.config.wizardcopy.js
