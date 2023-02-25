@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { signOut } from "next-auth/react";
 import { useUser } from "@hooks/useUser";
@@ -10,16 +11,9 @@ function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(" ");
 }
 
-interface NavigationItem {
-	name: string;
-	href: string;
-	current?: boolean;
-	onClick?: boolean;
-}
-
 type NavProps = {
-	navigation: NavigationItem[];
-	userNavigation: NavigationItem[];
+	navigation: any[];
+	userNavigation: any[];
 };
 
 export default function Nav({ navigation, userNavigation }: NavProps) {

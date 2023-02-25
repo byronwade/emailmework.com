@@ -31,6 +31,6 @@
 			"@common/*": ["src/components/Common/*"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "firebase/db.js", "firebase/firebase.js", "firebase/firebase.js"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "firebase/db.js", "firebase/firebase.js", "firebase/firebase.js", "src/app/(dashboard)/admin/adminConfig.js"],
 	"exclude": ["node_modules"]
 }
