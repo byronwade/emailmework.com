@@ -69,7 +69,7 @@ export default function Example() {
 					<div>
 						<a href="/" className="flex">
 							<span className="sr-only">Your Company</span>
-							<Image width={8} className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+							<Image width={8} height={11483} className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
 						</a>
 					</div>
 					<div className="-my-2 -mr-2 md:hidden">
@@ -131,7 +131,7 @@ export default function Example() {
 																	<li key={post.id} className="flow-root">
 																		<a href={post.href} className="-m-3 flex rounded-lg p-3 hover:bg-gray-100">
 																			<div className="hidden flex-shrink-0 sm:block">
-																				<Image width={20} className="h-20 w-32 rounded-md object-cover" src={post.imageUrl} alt="" />
+																				<Image width={20} height={20} className="h-20 w-32 rounded-md object-cover" src={post.imageUrl} alt="" />
 																			</div>
 																			<div className="w-0 flex-1 sm:ml-8">
 																				<h4 className="truncate text-base font-medium text-gray-900">{post.name}</h4>
@@ -181,7 +181,7 @@ export default function Example() {
 						<div className="px-5 pt-5 pb-6 sm:pb-8">
 							<div className="flex items-center justify-between">
 								<div>
-									<Image width={8} className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+									<Image width={8} height={8} className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
 								</div>
 								<div className="-mr-2">
 									<Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

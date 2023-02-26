@@ -33,8 +33,8 @@ export default function Nav({ navigation, userNavigation }: NavProps) {
 								<div className="flex">
 									<div className="flex flex-shrink-0 items-center">
 										<Link href="/">
-											<Image width={1450} className="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
-											<Image width={1450} className="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+											<Image width={1450} height={1143} className="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+											<Image width={1450} height={1143} className="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
 										</Link>
 									</div>
 									<div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
@@ -56,7 +56,7 @@ export default function Nav({ navigation, userNavigation }: NavProps) {
 										<div>
 											<Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
 												<span className="sr-only">Open user menu</span>
-												<Image width={8} className="h-8 w-8 rounded-full" src={user.image} alt="" />
+												<Image width={8} height={8} className="h-8 w-8 rounded-full" src={user.image} alt="" />
 											</Menu.Button>
 										</div>
 										<Transition enter="transition ease-out duration-200" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
@@ -95,7 +95,7 @@ export default function Nav({ navigation, userNavigation }: NavProps) {
 							<div className="border-t border-gray-200 pt-4 pb-3">
 								<div className="flex items-center px-4">
 									<div className="flex-shrink-0">
-										<Image width={10} className="h-10 w-10 rounded-full" src={user.image} alt="" />
+										<Image width={10} height={10} className="h-10 w-10 rounded-full" src={user.image} alt="" />
 									</div>
 									<div className="ml-3">
 										<div className="text-base font-medium text-gray-800">{user.name}</div>

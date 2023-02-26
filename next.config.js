@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	dangerouslyAllowSVG: true,
 	images: {
 		domains: ["lh3.googleusercontent.com", "via.placeholder.com", "avatars.githubusercontent.com", "platform-lookaside.fbsbx.com", "tailwindui.com"],
 		formats: ["image/avif", "image/webp"],

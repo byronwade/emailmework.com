@@ -119,7 +119,7 @@ export default function Login() {
 					</div>
 				</div>
 				<div className="relative hidden w-0 flex-1 lg:block">
-					<Image width={1719} className="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3544&q=80" alt="" />
+					<Image width={1719} height={1143} className="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3544&q=80" alt="" />
 				</div>
 			</div>
 		</>
