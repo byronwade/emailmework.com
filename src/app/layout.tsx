@@ -8,8 +8,11 @@ import { client } from "../../supabase.js";
 import LogRocket from "logrocket";
 import setupLogRocketReact from "logrocket-react";
 
-// after calling LogRocket.init()
-setupLogRocketReact(LogRocket);
+if (typeof window !== "undefined") {
+	LogRocket.init("mn3tkr/emailmeworkcom");
+	// plugins should also only be initialized when in the browser
+	setupLogRocketReact(LogRocket);
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (

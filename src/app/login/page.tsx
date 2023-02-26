@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { signIn } from "next-auth/react";
 
 export default function Login() {
@@ -13,7 +14,7 @@ export default function Login() {
 				<div className="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
 					<div className="mx-auto w-full max-w-sm lg:w-96">
 						<div>
-							<img className="h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+							<Image width={1450} height={870} className="h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
 							<h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
 							<p className="mt-2 text-sm text-gray-600">
 								Or{" "}
@@ -118,7 +119,7 @@ export default function Login() {
 					</div>
 				</div>
 				<div className="relative hidden w-0 flex-1 lg:block">
-					<img className="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3544&q=80" alt="" />
+					<Image width={1719} className="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3544&q=80" alt="" />
 				</div>
 			</div>
 		</>

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ["lh3.googleusercontent.com", "via.placeholder.com", "avatars.githubusercontent.com", "platform-lookaside.fbsbx.com"],
+		domains: ["lh3.googleusercontent.com", "via.placeholder.com", "avatars.githubusercontent.com", "platform-lookaside.fbsbx.com", "tailwindui.com"],
 		formats: ["image/avif", "image/webp"],
 		// Twitter Profile Picture
 		remotePatterns: [

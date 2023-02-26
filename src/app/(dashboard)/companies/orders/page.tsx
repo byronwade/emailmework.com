@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import PageHeader from "@dashboard/PageHeader/PageHeader";
 import { orders, breadTrail, buttons } from "./ordersConfig";
 
@@ -35,7 +36,7 @@ export default function Jobs() {
 								{order.products.map((product) => (
 									<div key={product.id} className="py-6 sm:flex">
 										<div className="flex space-x-4 sm:min-w-0 sm:flex-1 sm:space-x-6 lg:space-x-8">
-											<img src={product.imageSrc} alt={product.imageAlt} className="h-20 w-20 flex-none rounded-md object-cover object-center sm:h-48 sm:w-48" />
+											<Image height={20} width={20} src={product.imageSrc} alt={product.imageAlt} className="h-20 w-20 flex-none rounded-md object-cover object-center sm:h-48 sm:w-48" />
 											<div className="min-w-0 flex-1 pt-1.5 sm:pt-0">
 												<h3 className="text-sm font-medium text-gray-900">
 													<a href={product.href}>{product.name}</a>
