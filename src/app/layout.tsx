@@ -5,6 +5,11 @@ import { RecoilRoot } from "recoil";
 import SessionProvider from "./SessionProvider";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "../../supabase.js";
+import LogRocket from "logrocket";
+import setupLogRocketReact from "logrocket-react";
+
+// after calling LogRocket.init()
+setupLogRocketReact(LogRocket);
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (

@@ -2,6 +2,7 @@
 	"presets": ["@babel/preset-env", "@babel/preset-react", "next/babel"],
 	"plugins": [
 		"@babel/plugin-proposal-class-properties",
+		"add-react-displayname",
 		[
 			"module-resolver",
 			{
