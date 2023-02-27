@@ -23,8 +23,8 @@
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./*"],
-			"@hooks/*": ["src/hooks/*"],
-			"@recoil/*": ["src/recoil/*"],
+			"@hooks/*": ["src/lib/hooks/*"],
+			"@recoil/*": ["src/lib/recoil/*"],
 			"@components/*": ["src/components/*"],
 			"@dashboard/*": ["src/components/Dashboard/*"],
 			"@website/*": ["src/components/Website/*"],

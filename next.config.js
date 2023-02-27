@@ -2,7 +2,7 @@
 const nextConfig = {
 	dangerouslyAllowSVG: true,
 	images: {
-		domains: ["lh3.googleusercontent.com", "via.placeholder.com", "avatars.githubusercontent.com", "platform-lookaside.fbsbx.com", "tailwindui.com"],
+		domains: ["lh3.googleusercontent.com", "via.placeholder.com", "avatars.githubusercontent.com", "platform-lookaside.fbsbx.com", "tailwindui.com", "images.unsplash.com"],
 		formats: ["image/avif", "image/webp"],
 		// Twitter Profile Picture
 		remotePatterns: [

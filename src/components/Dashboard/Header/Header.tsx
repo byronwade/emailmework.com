@@ -2,7 +2,7 @@
 "use client";
 import Image from "next/image";
 import { signOut } from "next-auth/react";
-import { useUser } from "@hooks/useUser";
+import { useUser } from "@/src/lib/hooks/useUser";
 
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
