@@ -1,294 +1,340 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/byronwade/emailmework.com/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+# Boilerplate and Starter for Next JS 13+, Tailwind CSS 3.3 and TypeScript
+
+<p align="center">
+  <a href="https://creativedesignsguru.com/demo/Nextjs-Boilerplate/"><img height="300" src="public/assets/images/nextjs-starter-banner.png?raw=true" alt="Next js starter banner"></a>
+</p>
+
+🚀 Boilerplate and Starter for Next.js with App Router and Page Router support, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commitlint, VSCode, Netlify, PostCSS, Tailwind CSS, Authentication with [Clerk](https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate), Database with DrizzleORM (SQLite, PostgreSQL, and MySQL) and [Turso](https://turso.tech/?utm_source=nextjsstarterbp)
+
+Clone this project and use it to create your own [Next.js](https://nextjs.org) project. You can check a [Next js templates demo](https://creativedesignsguru.com/demo/Nextjs-Boilerplate/).
+
+## Sponsors
+
+<table width="100%">
+  <tr height="187px">
+    <td align="center" width="33%">
+      <a href="https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/a3cd2a25-377b-4c0d-a3d3-bce121df2c94">
+          <source media="(prefers-color-scheme: light)" srcset="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/3459074d-c3e2-46c5-8be4-b836cb7989ea">
+          <img alt="Clerk – Authentication & User Management for Next.js" src="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/3459074d-c3e2-46c5-8be4-b836cb7989ea" width="260">
+        </picture>
+      </a>
+    </td>
+    <td width="33%">
+      <a href="https://turso.tech/?utm_source=nextjsstarterbp">
+        <img src="public/assets/images/turso.png?raw=true" alt="SQLite Developer Experience" width="260">
+      </a>
+    </td>
+    <td width="33%">
+      <a href="https://upstash.com/?utm_source=nextjs-boilerplate">
+        <img src="https://raw.githubusercontent.com/upstash/sponsorship/master/redis.png" alt="Upstash" width="260">
+      </a>
+    </td>
+  </tr>
+  <tr height="187px">
+    <td style=width="33%">
+      <a href="https://nextlessjs.com">
+        <img src="https://creativedesignsguru.com/assets/images/themes/nextlessjs-github-banner.png" alt="React SaaS Boilerplate Next.js" />
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="mailto:contact@creativedesignsguru.com">
+        Add your logo here
+      </a>
+    </td>
+  </tr>
+</table>
+
+### Features
+
+Developer experience first:
+
+- ⚡ [Next.js](https://nextjs.org) with App Router and Page Router support
+- 🔥 Type checking [TypeScript](https://www.typescriptlang.org)
+- 💎 Integrate with [Tailwind CSS](https://tailwindcss.com)
+- ✅ Strict Mode for TypeScript and React 18
+- 🔒 Authentication with [Clerk](https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate): Sign up, Sign in, Sign out, Forgot password, Reset password, and more.
+- 📦 Type-safe ORM with DrizzleORM, compatible with SQLite, PostgreSQL, and MySQL
+- 💽 Global Database with [Turso](https://turso.tech/?utm_source=nextjsstarterbp)
+- ♻️ Type-safe environment variables with T3 Env
+- ⌨️ Form with React Hook From
+- 🔴 Validation library with Zod
+- 📏 Linter with [ESLint](https://eslint.org) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
+- 💖 Code Formatter with [Prettier](https://prettier.io)
+- 🦊 Husky for Git Hooks
+- 🚫 Lint-staged for running linters on Git staged files
+- 🚓 Lint git commit with Commitlint
+- 📓 Write standard compliant commit messages with Commitizen
+- 🦺 Unit Testing with Jest and React Testing Library
+- 🧪 E2E Testing with Cypress
+- 👷 Run tests on pull request with GitHub Actions
+- 🎉 Storybook for UI development
+- 🎁 Automatic changelog generation with Semantic Release
+- 🔍 Visual testing with Percy (Optional)
+- 💡 Absolute Imports using `@` prefix
+- 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript, Jest
+- 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
+- 🗺️ Sitemap.xml and robots.txt with next-sitemap
+- ⌘ Database exploration with Drizzle Studio and CLI migration tool with Drizzle Kit
+- ⚙️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+- 🖱️ One click deployment with Vercel or Netlify (or manual deployment to any hosting services)
+- 🌈 Include a FREE minimalist theme
+- 💯 Maximize lighthouse score
+
+Built-in feature from Next.js:
+
+- ☕ Minify HTML & CSS
+- 💨 Live reload
+- ✅ Cache busting
+
+### Philosophy
+
+- Nothing is hidden from you, so you have the freedom to make the necessary adjustments to fit your needs and preferences.
+- Easy to customize
+- Minimal code
+- SEO-friendly
+- 🚀 Production-ready
+
+### Requirements
+
+- Node.js 16+ and npm
 
+### Getting started
 
+Run the following command on your local environment:
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/byronwade/emailmework.com">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+```shell
+git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
+cd my-project-name
+npm install
+```
 
-  <h3 align="center">Email Me Work</h3>
+Then, you can run locally in development mode with live reload:
 
-  <a href="https://chat.openai.com/">Generated by ChatGPT</a>
+```shell
+npm run dev
+```
 
-<p>Emailmework.com is a platform connecting companies and customers with in-depth profiles, sophisticated rating algorithm for fair matching, and job ratings for quality. Eliminates limitations of traditional job boards and fosters respectful community.</p>
+Open http://localhost:3000 with your favorite browser to see your project.
 
-<p>
-    <br />
-    <a href="https://github.com/byronwade/emailmework.com"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://emailmeworkcom-production.up.railway.app/">View Demo</a>
-    ·
-    <a href="https://github.com/byronwade/emailmework.com/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/byronwade/emailmework.com/issues">Request Feature</a>
-  </p>
-</div>
+### Set up authentication
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+Create a Clerk account at [Clerk.com](https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate) and create a new application in Clerk Dashboard. Then, copy `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` into `.env.local` file (not tracked by Git):
 
+```shell
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_pub_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+```
 
+Now, you can a fully working authentication system with Next.js: Sign up, Sign in, Sign out, Forgot password, Reset password, Update profile, Update password, Update email, Delete account, and more.
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+### Set up remote database
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+The project uses DrizzleORM, a type-safe ORM compatible with SQLite, PostgreSQL, and MySQL databases. By default, the project is set up to work seamlessly with libSQL, and for production purposes, it's integrated with [Turso](https://turso.tech/?utm_source=nextjsstarterbp). The Next.js Boilerplate also enables a smooth transition to an alternative database provider if your project requires it.
 
-<p>** Please keep in mind that im a novice progrmmer and plan to work on this app with minimal knowledge, ive got an idea and im figureing it out along the way. If you would like to help develop the project you can email me at [bcw1995@gmail.com](mailto://bcw1995@gmail.com)</p>
+First, you need to create a Turso account at [Turso.tech](https://turso.tech/?utm_source=nextjsstarterbp) and install the Turso CLI:
 
-<p>This platform will be open source for now, I plan to start biling at $1 per accepted job posting, with the companies paying for the leads. Competiters are charging anywhere from $5-70 per job/lead accepted.</p>
+```shell
+brew install tursodatabase/tap/turso
+turso auth signup # Sign up to Turso
+```
 
-<p>At emailmework.com, we are dedicated to providing an unparalleled platform for companies to showcase their services. Our innovative platform enables companies to create in-depth profiles that include all the important details about their company such as history, website, and areas of expertise. Our ultimate goal is to bridge the gap between customers and companies and match them up in a seamless and effective way.</p>
+Then, create a new database:
 
-<p>To maintain fairness and quality, we will developed a sophisticated algorithm that rates both customers and companies on a scale of 1-100 based on factors such as customer behavior, frequency of reviews, and response time of the companies. This algorithm ensures that the right customer is matched with the right company, providing a positive experience for all. Furthermore, jobs will also be rated 1-100 based on the level of detail and quality of the content added.</p>
+```shell
+turso db create nextjs-boilerplate
+```
 
-<p>We understand the limitations posed by traditional job boards and the frustration of customers being bombarded with irrelevant information through emails, phone calls, and texts. At emailmework.com, we are committed to fostering a respectful and collaborative community between companies and customers.</p>
+Now, you need to update the `DATABASE_URL` in `.env` file with the database URL provided by Turso:
 
-<p>As a seasoned professional in the construction industry with expertise in plumbing and septic services, I understand the limitations of current job boards and am determined to provide a more effective solution. I am committed to providing a platform that is both efficient and fair for both companies and customers.</p>
+```shell
+turso db show nextjs-boilerplate --url
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+# .env
+# DATABASE_URL=libsql://[RANDOM-CHARS]-[DB-NAME]-[ORG-NAME].turso.io
+```
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Finally, you also need to create a new environement variable `DATABASE_AUTH_TOKEN` in `.env.local` (not tracked by Git) with the auth token provided by Turso:
 
-Use the `BLANK_README.md` to get started.
+```shell
+turso db tokens create nextjs-boilerplate
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+# .env.local
+# DATABASE_AUTH_TOKEN=[your-auth-token]
+```
 
+### Project structure
 
+```shell
+.
+├── README.md                       # README file
+├── __mocks__                       # Mocks for testing
+├── .github                         # GitHub folder
+├── .husky                          # Husky configuration
+├── .storybook                      # Storybook folder
+├── .vscode                         # VSCode configuration
+├── cypress                         # Cypress folder
+├── migrations                      # Database migrations
+├── public                          # Public assets folder
+├── scripts                         # Scripts folder
+├── src
+│   ├── app                         # Next JS App (App Router)
+│   ├── components                  # React components
+│   ├── layouts                     # Layouts components
+│   ├── libs                        # 3rd party libraries
+│   ├── models                      # Database models
+│   ├── pages                       # Next JS Pages (page router)
+│   ├── pages.test                  # Next JS Pages tests (this avoids tests to be treated as a Next.js pages)
+│   ├── styles                      # Styles folder
+│   ├── templates                   # Templates folder
+│   ├── utils                       # Utilities folder
+│   └── validations                 # Validation schemas
+├── tailwind.config.js              # Tailwind CSS configuration
+└── tsconfig.json                   # TypeScript configuration
+```
 
-### Built With
+### Customization
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+You can easily configure Next js Boilerplate by making a search in the whole project with `FIXME:` for making quick customization. Here is some of the most important files to customize:
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
+- `public/apple-touch-icon.png`, `public/favicon.ico`, `public/favicon-16x16.png` and `public/favicon-32x32.png`: your website favicon, you can generate from https://favicon.io/favicon-converter/
+- `src/styles/global.css`: your CSS file using Tailwind CSS
+- `src/utils/AppConfig.ts`: configuration file
+- `src/templates/Main.tsx`: default theme
+- `next-sitemap.config.js`: sitemap configuration
+- `.env`: default environment variables
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+You have access to the whole code source if you need further customization. The provided code is only example for you to start your project. The sky is the limit 🚀.
 
+### Commit Message Format
 
+The project enforces [Conventional Commits](https://www.conventionalcommits.org/) specification. This means that all your commit messages must be formatted according to the specification. To help you write commit messages, the project uses [Commitizen](https://github.com/commitizen/cz-cli), an interactive CLI that guides you through the commit process. To use it, run the following command:
 
-<!-- GETTING STARTED -->
-## Getting Started
+```shell
+npm run commit
+```
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+One of the benefits of using Conventional Commits is that it allows us to automatically generate a `CHANGELOG` file. It also allows us to automatically determine the next version number based on the types of commits that are included in a release.
 
-### Prerequisites
+### Testing
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+All tests are colocated with the source code inside the same directory. So, it makes it easier to find them. Unfortunately, it is not possible with the `pages` folder which is used by Next.js for routing. So, what is why we have a `pages.test` folder to write tests from files located in `pages` folder.
 
-### Installation
+### Enable Edge runtime (optional)
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+The App Router folder is compatible with the Edge runtime. You can enable it by uncommenting the following lines `src/app/layouts.tsx`:
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+```tsx
+// export const runtime = 'edge';
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+For your information, the database migration is not compatible with the Edge runtime. So, you need to disable the automatic migration in `src/libs/DB.ts`:
 
+```tsx
+if (process.env.NODE_ENV !== 'production') {
+  await migrate(db, { migrationsFolder: './migrations' });
+}
+```
 
+After disabling it, you are required to run the migration manually with:
 
-<!-- USAGE EXAMPLES -->
-## Usage
+```shell
+npm run db:migrate
+```
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+You also require to run the command each time you want to update the database schema.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+### Deploy to production
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+During the build process, the database migration is automatically executed. So, you don't need to run the migration manually. But, in your environment variable, `DATABASE_URL` and `DATABASE_AUTH_TOKEN` need to be defined.
 
+Then, you can generate a production build with:
 
+```shell
+$ npm run build
+```
 
-<!-- ROADMAP -->
-## Roadmap
+It generates an optimized production build of the boilerplate. For testing the generated build, you can run:
 
-- [x] Add Changelog
-- [x] Setup supabase
-- [x] Setup graphql
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+```shell
+$ npm run start
+```
 
-See the [open issues](https://github.com/byronwade/emailmework.com/issues) for a full list of proposed features (and known issues).
+The command starts a local server with the production build. Then, you can now open http://localhost:3000 with your favorite browser to see the project.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Deploy to Netlify
 
+Clone this repository on own GitHub account and deploy to Netlify in one click:
 
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Next-js-Boilerplate)
 
-<!-- CONTRIBUTING -->
-## Contributing
+During the setup, you need to define the `DATABASE_URL` and `DATABASE_AUTH_TOKEN` environment variables.
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+### Deploy to Vercel
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Deploy this Next JS Boilerplate on Vercel in one click:
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fixartz%2FNext-js-Boilerplate)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+During the setup, you need to define the `DATABASE_URL` and `DATABASE_AUTH_TOKEN` environment variables.
 
+### VSCode information (optional)
 
+If you are VSCode users, you can have a better integration with VSCode by installing the suggested extension in `.vscode/extension.json`. The starter code comes up with Settings for a seamless integration with VSCode. The Debug configuration is also provided for frontend and backend debugging experience.
 
-<!-- LICENSE -->
-## License
+With the plugins installed on your VSCode, ESLint and Prettier can automatically fix the code and show you the errors. Same goes for testing, you can install VSCode Jest extension to automatically run your tests and it also show the code coverage in context.
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Pro tips: if you need a project wide type checking with TypeScript, you can run a build with <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> on Mac.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Contributions
 
+Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug. Totally open to any suggestions and improvements.
 
+### License
 
-<!-- CONTACT -->
-## Contact
+Licensed under the MIT License, Copyright © 2023
 
-Byron Wade - [@byron_c_wade](https://twitter.com/byron_c_wade) - bcw1995@gmail.com
+See [LICENSE](LICENSE) for more information.
 
-<!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
+## Sponsors
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<table width="100%">
+  <tr height="187px">
+    <td align="center" width="33%">
+      <a href="https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/a3cd2a25-377b-4c0d-a3d3-bce121df2c94">
+          <source media="(prefers-color-scheme: light)" srcset="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/3459074d-c3e2-46c5-8be4-b836cb7989ea">
+          <img alt="Clerk – Authentication & User Management for Next.js" src="https://github.com/ixartz/Next-js-Boilerplate/assets/1328388/3459074d-c3e2-46c5-8be4-b836cb7989ea" width="260">
+        </picture>
+      </a>
+    </td>
+    <td width="33%">
+      <a href="https://turso.tech/?utm_source=nextjsstarterbp">
+        <img src="public/assets/images/turso.png?raw=true" alt="SQLite Developer Experience" width="260">
+      </a>
+    </td>
+    <td width="33%">
+      <a href="https://upstash.com/?utm_source=nextjs-boilerplate">
+        <img src="https://raw.githubusercontent.com/upstash/sponsorship/master/redis.png" alt="Upstash" width="260">
+      </a>
+    </td>
+  </tr>
+  <tr height="187px">
+    <td style=width="33%">
+      <a href="https://nextlessjs.com">
+        <img src="https://creativedesignsguru.com/assets/images/themes/nextlessjs-github-banner.png" alt="React SaaS Boilerplate Next.js" />
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="mailto:contact@creativedesignsguru.com">
+        Add your logo here
+      </a>
+    </td>
+  </tr>
+</table>
 
+---
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/byronwade/emailmework.com/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/byronwade/emailmework.com/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/byronwade/emailmework.com/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/byronwade/emailmework.com/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/byronwade/emailmework.com/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
-
-
-
-
-
-
-
-<p>The goal of the Scores collection is to provide a system for sorting and ranking jobs based on their relevance to a particular client. The relevance score is calculated using a set of algorithms and formulas that take into account various factors that affect the suitability of a job for a particular client. These factors may include the job location, budget, equipment required, the client's past job history, and any other relevant information that can impact the relevance of the job.
-
-The algorithm uses this information to calculate a relevance score for each job, which is then stored in the Scores collection along with the job ID, client ID, and a timestamp of when the score was calculated. The relevance scores are updated dynamically, as new information becomes available, to ensure that the most relevant jobs are always displayed at the top of the list for a particular client.
-
-The sorting and ranking of jobs based on their relevance scores can help to improve the efficiency and accuracy of the job search process for clients, as it provides them with a customized and relevant list of job options. This can lead to better job matches, higher client satisfaction, and a more efficient use of time and resources for both clients and companies.
-
-The Scores collection is an essential part of the job search and placement process, providing valuable insights and information that can be used to improve the overall experience for clients and companies.
-
-The algorithm uses a weighted average approach to calculate the relevance scores. Each factor is assigned a weight, which represents its importance in determining the relevance of the job. For example, the job location may have a higher weight compared to the budget as it is more important for some clients. The weightings are determined based on statistical analysis of previous job search patterns and preferences of clients.
-
-The scores are updated regularly to ensure that the most accurate information is displayed to the client. This system helps to improve the job search experience for the client, as they will only see jobs that are relevant to their needs and preferences.</p>
+Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
