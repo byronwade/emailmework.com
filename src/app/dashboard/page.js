@@ -6,7 +6,6 @@ import { getAuth, signOut } from "firebase/auth";
 import MainMenu from "@/components/mainMenu";
 import { useTheme } from "@/context/ThemeContext";
 import NavBar from "@/components/navbar";
-import { Plus } from "react-feather";
 
 function Dashboard() {
 	const { user } = useAuthContext();
@@ -23,33 +22,18 @@ function Dashboard() {
 
 	return (
 		<main className="h-full overflow-y-hidden">
-			<NavBar />
 			<div className="xs:flex-col flex h-full w-full overflow-y-auto md:flex-row">
 				<MainMenu />
-				<div className="xs:pt-8 w-full px-4 pt-16">
-					<div className="flex flex-wrap items-center gap-6 sm:flex-nowrap">
-						<h1 className="text-base font-semibold leading-7 text-gray-900">Cashflow</h1>
-						<div className="order-last flex w-full gap-x-8 text-sm font-semibold leading-6 sm:order-none sm:w-auto sm:border-l sm:border-gray-200 sm:pl-6 sm:leading-7">
-							<a href="#" className={`${color}`}>
-								Last 7 days
-							</a>
-							<a href="#" className="text-gray-700">
-								Last 30 days
-							</a>
-							<a href="#" className="text-gray-700">
-								All-time
-							</a>
-						</div>
-						<a href="#" className="ml-auto flex items-center gap-x-1 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-							<Plus className="-ml-1.5 h-5 w-5" aria-hidden="true" />
-							New Job
-						</a>
-					</div>
+				<div className="w-full px-4">
+					<NavBar />
 					<div className="py-4">
-						<h1 className={`${color}`}>Only logged in users can view this page</h1>
+						<h1 className={`${color}`}>Are you looking for work or looking for a contractor?</h1>
+						<button className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">get leads</button>
+						<button className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">get contractors</button>
+						{/* <h1 className={`${color}`}>Only logged in users can view this page</h1>
 						<button className={`${color}`} onClick={() => signOut(auth)}>
 							Sign Out
-						</button>
+						</button> */}
 					</div>
 				</div>
 			</div>
