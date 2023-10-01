@@ -9,7 +9,7 @@ export default function Example() {
 				<div className="w-full px-4">
 					<NavBar />
 					<div className="py-4">
-						<section className="mb-32">
+						{/* <section className="mb-32">
 							<div className="container mx-auto xl:px-32">
 								<div className="grid items-center lg:grid-cols-2">
 									<div className="mb-12 lg:mb-0">
@@ -82,7 +82,7 @@ export default function Example() {
 									</div>
 								</div>
 							</div>
-						</section>
+						</section> */}
 					</div>
 				</div>
 			</div>

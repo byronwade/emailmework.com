@@ -10,7 +10,7 @@ export default function NavBar() {
 	const color = mode === "bg-[#1c1c1c]" ? "text-[#cccccc]" : "text-[#1c1c1c]";
 
 	return (
-		<div className="flex w-full items-center justify-between md:min-h-[4rem] md:border-none md:bg-transparent">
+		<div className="sticky top-0 z-10 flex w-full items-center justify-between bg-[#1c1c1c] md:min-h-[4rem]">
 			<h3 className={`flex w-full justify-start text-xl font-bold ${color}`}>emailmework.com</h3>
 			<div className="flex w-full items-center justify-end">
 				<button type="button" className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
