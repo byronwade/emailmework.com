@@ -1,6 +1,5 @@
 import MainMenu from "@/components/mainMenu";
-import { useTheme } from "@/context/ThemeContext";
-import NavBar from "@/components/navbar";
+import { DollarSign, User } from "react-feather";
 
 const tabs = [
 	{ name: "Applied", href: "#", current: false },
@@ -16,34 +15,401 @@ function classNames(...classes) {
 
 export default function Example() {
 	return (
-		<main className="h-full overflow-y-hidden">
-			<div className="xs:flex-col flex h-full w-full overflow-y-auto md:flex-row">
+		<main>
+			<div className="flex w-full md:flex-row">
 				<MainMenu />
-				<div className="w-full px-4">
-					<NavBar />
-					<div className="py-4">
-						<div className="border-b border-gray-200 pb-5 sm:pb-0">
-							<h3 className="text-base font-semibold leading-6 text-gray-900">Candidates</h3>
-							<div className="mt-3 sm:mt-4">
-								<div className="sm:hidden">
-									<label htmlFor="current-tab" className="sr-only">
-										Select a tab
-									</label>
-									<select id="current-tab" name="current-tab" className="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" defaultValue={tabs.find((tab) => tab.current).name}>
-										{tabs.map((tab) => (
-											<option key={tab.name}>{tab.name}</option>
-										))}
-									</select>
+				<div className="container mx-auto my-40 max-w-3xl">
+					<div className="bg-brown-600 mb-10 rounded-md">
+						<div className="mb-4 rounded-md p-8 md:flex md:items-center md:justify-between">
+							<div className="min-w-0 flex-1">
+								<h2 className="text-2xl font-bold leading-7 text-black sm:truncate sm:text-3xl sm:tracking-tight">Billing</h2>
+								<p>This is some content for the billing stuff</p>
+							</div>
+							{/* <div className="mt-4 flex md:ml-4 md:mt-0">
+								<button type="button" className="inline-flex items-center rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/20">
+									Edit
+								</button>
+								<button type="button" className="ml-3 inline-flex items-center rounded-md bg-brown-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brown-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brown-500">
+									Publish
+								</button>
+							</div> */}
+						</div>
+					</div>
+					<div className="-mx-4 mb-4 flex flex-wrap">
+						<div className="mb-4 w-full px-4 md:mb-0 md:w-1/2">
+							<div className="h-full rounded-md bg-[#252525] p-6">
+								<div className="flex items-center">
+									<div className="bg-brown-600 mr-4 flex h-12 w-12 items-center justify-center self-start rounded-md">
+										<DollarSign className={`text-brown-900`} size="20" />
+									</div>
+									<div>
+										<h5 className="text-xs font-semibold leading-6 text-gray-300" data-config-id="auto-txt-1-9">
+											Monthly Payment
+										</h5>
+										<div className="flex items-end font-semibold leading-none text-gray-100">
+											<span className="text-2xl" data-config-id="auto-txt-2-9">
+												$65
+											</span>
+											<span className="pb-1 text-sm" data-config-id="auto-txt-3-9">
+												/month
+											</span>
+										</div>
+									</div>
 								</div>
-								<div className="hidden sm:block">
-									<nav className="-mb-px flex space-x-8">
-										{tabs.map((tab) => (
-											<a key={tab.name} href={tab.href} className={classNames(tab.current ? "border-indigo-500 text-indigo-600" : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700", "whitespace-nowrap border-b-2 px-1 pb-4 text-sm font-medium")} aria-current={tab.current ? "page" : undefined}>
-												{tab.name}
-											</a>
-										))}
-									</nav>
+							</div>
+						</div>
+						<div className="w-full px-4 md:w-1/2">
+							<div className="h-full rounded-md bg-[#252525] p-6">
+								<div className="flex items-center">
+									<div className="bg-brown-600 mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center self-start rounded-md">
+										<User className={`text-brown-900`} size="20" />
+									</div>
+									<div>
+										<h5 className="text-xs font-semibold leading-6 text-gray-300" data-config-id="auto-txt-4-9">
+											Total Clients
+										</h5>
+										<div className="flex items-center text-2xl font-semibold leading-none text-gray-100">
+											<span data-config-id="auto-txt-5-9">145</span>
+											<span className="ml-2 inline-block rounded-full bg-teal-900 px-2 py-1 text-xs font-medium text-green-500" data-config-id="auto-txt-6-9">
+												+12,0%
+											</span>
+										</div>
+									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+					<div className="mb-6 rounded-md bg-[#252525] px-10 pb-10 pt-6">
+						<div className="-mx-4 mb-6 flex flex-wrap items-center justify-between">
+							<div className="mb-2 w-full px-4 sm:mb-0 sm:w-auto">
+								<h4 className="text-lg font-semibold text-gray-100" data-config-id="auto-txt-7-9">
+									Payment methods
+								</h4>
+							</div>
+							<div className="w-full px-4 sm:w-auto">
+								<a className="text-brown-500 hover:text-brown-400 inline-flex items-center text-sm font-bold" href="#">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-config-id="auto-svg-3-9">
+										<path
+											d="M12.667 7.33332H8.66699V3.33332C8.66699 3.15651 8.59675 2.98694 8.47173 2.86192C8.34671 2.73689 8.17714 2.66666 8.00033 2.66666C7.82351 2.66666 7.65395 2.73689 7.52892 2.86192C7.4039 2.98694 7.33366 3.15651 7.33366 3.33332V7.33332H3.33366C3.15685 7.33332 2.98728 7.40356 2.86225 7.52859C2.73723 7.65361 2.66699 7.82318 2.66699 7.99999C2.66699 8.1768 2.73723 8.34637 2.86225 8.47139C2.98728 8.59642 3.15685 8.66666 3.33366 8.66666H7.33366V12.6667C7.33366 12.8435 7.4039 13.013 7.52892 13.1381C7.65395 13.2631 7.82351 13.3333 8.00033 13.3333C8.17714 13.3333 8.34671 13.2631 8.47173 13.1381C8.59675 13.013 8.66699 12.8435 8.66699 12.6667V8.66666H12.667C12.8438 8.66666 13.0134 8.59642 13.1384 8.47139C13.2634 8.34637 13.3337 8.1768 13.3337 7.99999C13.3337 7.82318 13.2634 7.65361 13.1384 7.52859C13.0134 7.40356 12.8438 7.33332 12.667 7.33332Z"
+											fill="currentColor"
+										></path>
+									</svg>
+									<span className="ml-2" data-config-id="auto-txt-8-9">
+										Add method
+									</span>
+								</a>
+							</div>
+						</div>
+						<div className="mb-6 border-b border-gray-400 pb-6">
+							<div className="-mx-4 -mb-5 flex flex-wrap items-center justify-between">
+								<div className="mb-5 w-full px-4 sm:w-auto">
+									<div className="flex items-center">
+										<img className="w-17 mr-4 h-12 self-start" src="trizzle-assets/logos/visa-logo.svg" alt="" data-config-id="auto-img-1-9" />
+										<div>
+											<h5 className="text-sm font-semibold leading-5 text-gray-100" data-config-id="auto-txt-9-9">
+												Visa ending in 3456
+											</h5>
+											<span className="text-xs font-medium text-gray-300" data-config-id="auto-txt-10-9">
+												Expires 04/2028
+											</span>
+										</div>
+									</div>
+								</div>
+								<div className="mb-5 w-full px-4 sm:w-auto">
+									<a className="ml-auto inline-block rounded-lg bg-gray-600 px-2 py-1 text-xs font-bold leading-6 text-gray-200 transition duration-100 hover:bg-gray-700" href="#" data-config-id="auto-txt-11-9">
+										Default
+									</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div className="flex items-center">
+								<img className="w-17 mr-4 h-12 self-start" src="trizzle-assets/logos/card-logo.svg" alt="" data-config-id="auto-img-2-9" />
+								<div>
+									<h5 className="text-sm font-semibold leading-5 text-gray-100" data-config-id="auto-txt-12-9">
+										Visa ending in 3456
+									</h5>
+									<span className="text-xs font-medium text-gray-300" data-config-id="auto-txt-13-9">
+										Expires 04/2028
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="mb-10 rounded-md bg-[#252525] p-6">
+						<h4 className="mb-6 text-lg font-semibold text-gray-100" data-config-id="auto-txt-14-9">
+							Invoices
+						</h4>
+						<div className="mt-6 w-full overflow-x-scroll pb-4">
+							<table className="w-full min-w-max">
+								<thead>
+									<tr className="text-left">
+										<th className="p-0">
+											<div className="rounded-l-xl bg-gray-600 px-6 py-3">
+												<span className="text-xs font-semibold text-gray-300" data-config-id="auto-txt-15-9">
+													INVOICE ID
+												</span>
+											</div>
+										</th>
+										<th className="p-0">
+											<div className="bg-gray-600 px-6 py-3">
+												<span className="text-xs font-semibold text-gray-300" data-config-id="auto-txt-16-9">
+													AMOUNT
+												</span>
+											</div>
+										</th>
+										<th className="p-0">
+											<div className="bg-gray-600 px-6 py-3">
+												<button className="inline-flex items-center text-xs font-semibold text-gray-300">
+													<span className="mr-2" data-config-id="auto-txt-17-9">
+														DATE
+													</span>
+													<svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg" data-config-id="auto-svg-4-9">
+														<path
+															d="M7.8598 8.52669L4.9998 11.3934L2.1398 8.52669C2.01426 8.40115 1.844 8.33063 1.66646 8.33063C1.48893 8.33063 1.31867 8.40115 1.19313 8.52669C1.0676 8.65222 0.99707 8.82249 0.99707 9.00002C0.99707 9.17756 1.0676 9.34782 1.19313 9.47335L4.52646 12.8067C4.58844 12.8692 4.66217 12.9188 4.74341 12.9526C4.82465 12.9865 4.91179 13.0039 4.9998 13.0039C5.08781 13.0039 5.17494 12.9865 5.25618 12.9526C5.33742 12.9188 5.41116 12.8692 5.47313 12.8067L8.80646 9.47335C8.86862 9.41119 8.91793 9.3374 8.95157 9.25619C8.98521 9.17497 9.00252 9.08793 9.00252 9.00002C9.00252 8.91211 8.98521 8.82507 8.95157 8.74385C8.91793 8.66264 8.86862 8.58885 8.80646 8.52669C8.7443 8.46453 8.67051 8.41522 8.5893 8.38158C8.50808 8.34794 8.42104 8.33063 8.33313 8.33063C8.24522 8.33063 8.15818 8.34794 8.07696 8.38158C7.99575 8.41522 7.92196 8.46453 7.8598 8.52669ZM2.1398 5.47335L4.9998 2.60669L7.8598 5.47335C7.92177 5.53584 7.99551 5.58544 8.07675 5.61928C8.15799 5.65313 8.24512 5.67055 8.33313 5.67055C8.42114 5.67055 8.50828 5.65313 8.58952 5.61928C8.67075 5.58544 8.74449 5.53584 8.80646 5.47335C8.86895 5.41138 8.91855 5.33764 8.95239 5.2564C8.98624 5.17517 9.00366 5.08803 9.00366 5.00002C9.00366 4.91201 8.98624 4.82488 8.95239 4.74364C8.91855 4.6624 8.86895 4.58866 8.80646 4.52669L5.47313 1.19335C5.41116 1.13087 5.33742 1.08127 5.25618 1.04743C5.17494 1.01358 5.08781 0.996155 4.9998 0.996155C4.91179 0.996155 4.82465 1.01358 4.74341 1.04743C4.66217 1.08127 4.58844 1.13087 4.52646 1.19335L1.19313 4.52669C1.0676 4.65222 0.99707 4.82249 0.99707 5.00002C0.99707 5.17756 1.0676 5.34782 1.19313 5.47335C1.31867 5.59889 1.48893 5.66941 1.66646 5.66941C1.844 5.66941 2.01426 5.59889 2.1398 5.47335Z"
+															fill="currentColor"
+														></path>
+													</svg>
+												</button>
+											</div>
+										</th>
+										<th className="p-0">
+											<div className="rounded-r-xl bg-gray-600 px-5 py-3">
+												<span className="text-xs font-semibold text-gray-300" data-config-id="auto-txt-18-9">
+													STATUS
+												</span>
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<h5 className="text-sm font-medium text-gray-100" data-config-id="auto-txt-19-9">
+													INVOICE #3405
+												</h5>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-20-9">
+													$25.00
+												</span>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-21-9">
+													July 06, 2022
+												</span>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<div className="flex h-full items-center">
+													<span className="mr-1 inline-block h-2 w-2 rounded-full bg-yellow-500"></span>
+													<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-22-9">
+														Pending
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td className="p-0">
+											<div className="h-16 rounded-l-xl bg-gray-600 p-6">
+												<h5 className="text-sm font-medium text-gray-100" data-config-id="auto-txt-23-9">
+													INVOICE #3405
+												</h5>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 bg-gray-600 p-6">
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-24-9">
+													$25.00
+												</span>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 bg-gray-600 p-6">
+												<h5 className="text-sm font-medium text-gray-100" data-config-id="auto-txt-25-9">
+													July 06, 2022
+												</h5>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="flex h-16 items-center rounded-r-xl bg-gray-600 p-6">
+												<span className="mr-1 inline-block h-2 w-2 rounded-full bg-green-500"></span>
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-26-9">
+													Delivered
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<h5 className="text-sm font-medium text-gray-100" data-config-id="auto-txt-27-9">
+													INVOICE #3405
+												</h5>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-28-9">
+													$25.00
+												</span>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-29-9">
+													July 06, 2022
+												</span>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<div className="flex h-full items-center">
+													<span className="mr-1 inline-block h-2 w-2 rounded-full bg-yellow-500"></span>
+													<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-30-9">
+														Pending
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td className="p-0">
+											<div className="h-16 rounded-l-xl bg-gray-600 p-6">
+												<h5 className="text-sm font-medium text-gray-100" data-config-id="auto-txt-31-9">
+													INVOICE #3405
+												</h5>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 bg-gray-600 p-6">
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-32-9">
+													$25.00
+												</span>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 bg-gray-600 p-6">
+												<h5 className="text-sm font-medium text-gray-100" data-config-id="auto-txt-33-9">
+													July 06, 2022
+												</h5>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="flex h-16 items-center rounded-r-xl bg-gray-600 p-6">
+												<span className="mr-1 inline-block h-2 w-2 rounded-full bg-red-500"></span>
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-34-9">
+													Refunded
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<h5 className="text-sm font-medium text-gray-100" data-config-id="auto-txt-35-9">
+													INVOICE #3405
+												</h5>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-36-9">
+													$25.00
+												</span>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-37-9">
+													July 06, 2022
+												</span>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 p-6">
+												<div className="flex h-full items-center">
+													<span className="mr-1 inline-block h-2 w-2 rounded-full bg-yellow-500"></span>
+													<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-38-9">
+														Pending
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td className="p-0">
+											<div className="h-16 rounded-l-xl bg-gray-600 p-6">
+												<h5 className="text-sm font-medium text-gray-100" data-config-id="auto-txt-39-9">
+													INVOICE #3405
+												</h5>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 bg-gray-600 p-6">
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-40-9">
+													$25.00
+												</span>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="h-16 bg-gray-600 p-6">
+												<h5 className="text-sm font-medium text-gray-100" data-config-id="auto-txt-41-9">
+													July 06, 2022
+												</h5>
+											</div>
+										</td>
+										<td className="p-0">
+											<div className="flex h-16 items-center rounded-r-xl bg-gray-600 p-6">
+												<span className="mr-1 inline-block h-2 w-2 rounded-full bg-red-500"></span>
+												<span className="text-sm font-medium text-gray-100" data-config-id="auto-txt-42-9">
+													Refunded
+												</span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div className="-mx-4 flex flex-wrap">
+						<div className="mb-8 w-full px-4 md:mb-0 md:w-1/2">
+							<div className="mx-auto max-w-xs">
+								<h4 className="mb-1 font-bold text-gray-50" data-config-id="auto-txt-43-9">
+									Auto renewal
+								</h4>
+								<p className="mb-4 text-xs font-medium leading-5 text-gray-300" data-config-id="auto-txt-44-9">
+									All subscriptions are set to automatically renew, unless you cancel before the next renewal date.
+								</p>
+								<div className="flex items-center">
+									<button className="bg-brown-500 mr-3 flex h-6 w-11 items-center justify-center rounded-full">
+										<div className="h-5 w-5 rounded-full bg-transparent"></div>
+										<div className="h-5 w-5 rounded-full bg-white"></div>
+									</button>
+									<span className="text-xs font-medium text-gray-300" data-config-id="auto-txt-45-9">
+										Auto renewal is turrned on
+									</span>
+								</div>
+							</div>
+						</div>
+						<div className="w-full px-4 md:w-1/2">
+							<div className="mx-auto max-w-xs">
+								<h4 className="mb-1 font-bold text-gray-50" data-config-id="auto-txt-46-9">
+									Cancel Subscription
+								</h4>
+								<p className="mb-5 text-xs font-medium leading-5 text-gray-300" data-config-id="auto-txt-47-9">
+									You will lose access to all premium features in your current subscription plan
+								</p>
+								<a className="text-brown-500 inline-block text-xs font-medium hover:underline" href="#" data-config-id="auto-txt-48-9">
+									Cancel Subscription
+								</a>
 							</div>
 						</div>
 					</div>

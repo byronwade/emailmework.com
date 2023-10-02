@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"; // Corrected import
 import { getAuth, signOut } from "firebase/auth";
 import MainMenu from "@/components/mainMenu";
 import { useTheme } from "@/context/ThemeContext";
-import NavBar from "@/components/navbar";
+import { DollarSign, User } from "react-feather";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
@@ -108,35 +108,36 @@ function Dashboard() {
 	}, [user]);
 
 	return (
-		<main className="h-full overflow-y-hidden">
-			<div className="xs:flex-col flex h-full w-full overflow-y-auto md:flex-row">
+		<main>
+			<div className="flex w-full md:flex-row">
 				<MainMenu />
-				<div className="w-full px-4">
-					<NavBar />
-					<div className="py-4">
-						<div class="bg-primary-600 rounded-md bg-[url('https://mannatthemes.com/aabiz/default/assets/images/widgets/web-bg.png')] bg-cover p-8 text-center">
-							<h3 class="mb-2 text-[30px] font-medium text-white">52021</h3>
-							<p class="mb-4 text-lg uppercase text-slate-200">Organic Search</p>
-							<p class="px-5 text-base text-slate-300">Measures your user's sources that generate traffic metrics to your website for this month</p>
-							<button type="button" class="mt-6 rounded border  border-gray-100 bg-gray-100 px-2  py-1  text-sm font-medium text-blue-700 transition focus:z-10 focus:outline-none dark:border-gray-100 dark:bg-gray-100 dark:text-blue-700  lg:px-4 ">
-								Learn More
-							</button>
+				<div className="container mx-auto my-40 max-w-3xl">
+					<div role="list" className="mt-3">
+						<div className="bg-brown-600 mb-10 rounded-md">
+							<div className="mb-4 rounded-md p-8 md:flex md:items-center md:justify-between">
+								<div className="min-w-0 flex-1">
+									<h2 className="text-2xl font-bold leading-7 text-black sm:truncate sm:text-3xl sm:tracking-tight">Job postings</h2>
+									<p>When posting a job it sends an email to all contractors for the type of work you want an email</p>
+								</div>
+								<div className="mt-4 flex md:ml-4 md:mt-0">
+									{/* <button type="button" className="inline-flex items-center rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/20">
+										Edit
+									</button> */}
+									<button type="button" className="bg-brown-700 hover:bg-brown-600 focus-visible:outline-brown-600 ml-3 inline-flex items-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+										Create New Job
+									</button>
+								</div>
+							</div>
 						</div>
-
-						<h1 className={`${color}`}>Are you looking for work or looking for a contractor?</h1>
-						<button className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">get leads</button>
-						<button className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">get contractors</button>
-						{/* <h1 className={`${color}`}>Only logged in users can view this page</h1>
-						<button className={`${color}`} onClick={() => signOut(auth)}>
-							Sign Out
-						</button> */}
-
-						<ul role="list" className="">
-							{projects.map((project) => (
-								<li key={project.id} className="flex items-center justify-between gap-x-6 py-5">
+						{projects.map((project) => (
+							<div key={project.id} className="mb-10">
+								<div className="mb-2">
+									<p className={`text-xs text-neutral-400`}>this job was sent to 23 contractors in Monteray County, CA at 10:40am</p>
+								</div>
+								<div className="mb-3 flex items-center justify-between gap-x-6 rounded-md bg-[#252525] p-4">
 									<div className="min-w-0">
 										<div className="flex items-start gap-x-3">
-											<p className={`text-sm font-semibold leading-6 ${color}`}>{project.name}</p>
+											<p className={`text-sm font-semibold leading-6 text-white`}>{project.name}</p>
 											<p className={classNames(statuses[project.status], "mt-0.5 whitespace-nowrap rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-inset")}>{project.status}</p>
 										</div>
 										<div className="mt-1 flex items-center gap-x-2 text-xs leading-5 text-gray-500">
@@ -149,9 +150,17 @@ function Dashboard() {
 											<p className="truncate">Created by {project.createdBy}</p>
 										</div>
 									</div>
+									<div>
+										<div className="flex space-x-2">
+											<img className="relative z-30 inline-block h-10 w-10 rounded-md" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+											<img className="relative z-20 inline-block h-10 w-10 rounded-md" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+											<img className="relative z-10 inline-block h-10 w-10 rounded-md" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt="" />
+											<img className="relative z-0 inline-block h-10 w-10 rounded-md" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+										</div>
+									</div>
 									<div className="flex flex-none items-center gap-x-4">
 										<a href={project.href} className="hidden rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:block">
-											View project<span className="sr-only">, {project.name}</span>
+											View job<span className="sr-only">, {project.name}</span>
 										</a>
 										<Menu as="div" className="relative flex-none">
 											<Menu.Button className="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900">
@@ -185,9 +194,36 @@ function Dashboard() {
 											</Transition>
 										</Menu>
 									</div>
-								</li>
-							))}
-						</ul>
+								</div>
+							</div>
+						))}
+						<div className="rounded-md bg-[#252525] px-5 py-6">
+							<div className="-m-2 flex flex-wrap items-center justify-between">
+								<div className="w-full p-2 sm:w-auto">
+									<p className="text-sm font-medium text-gray-400">
+										<span>Showing </span>
+										<span className="text-gray-200">1</span>
+										<span> to </span>
+										<span className="text-gray-200"> 10 </span>
+										<span data-config-id="auto-txt-5-5">of 20 results</span>
+									</p>
+								</div>
+								<div className="w-full p-2 sm:w-auto">
+									<div className="-m-1.5 flex flex-wrap items-center">
+										<div className="w-full sm:w-auto">
+											<a className="mb-2 mr-3 inline-block w-full rounded-lg bg-gray-600 px-4 py-2 text-center text-xs font-semibold leading-normal text-gray-400 transition duration-200 hover:bg-gray-700 sm:w-auto" href="#" data-config-id="auto-txt-6-5">
+												Previous
+											</a>
+										</div>
+										<div className="w-full sm:w-auto">
+											<a className="bg-brown-500 text-brown-50 hover:bg-brown-600 mb-2 inline-block w-full rounded-lg px-4 py-2 text-center text-xs font-semibold leading-normal transition duration-200 sm:w-auto" href="#" data-config-id="auto-txt-7-5">
+												Next
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
