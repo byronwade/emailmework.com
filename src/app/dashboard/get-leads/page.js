@@ -30,7 +30,7 @@ export default function Example() {
 			<div className="flex w-full md:flex-row">
 				<MainMenu />
 				<form className="container mx-auto my-40 max-w-3xl">
-					<div className="bg-brown-600 rounded-md">
+					<div className="bg-brown-600 mb-10 rounded-md">
 						<div className="mb-4 rounded-md p-8 md:flex md:items-center md:justify-between">
 							<div className="min-w-0 flex-1">
 								<h2 className="text-2xl font-bold leading-7 text-black sm:truncate sm:text-3xl sm:tracking-tight">Get Leads</h2>
@@ -39,7 +39,10 @@ export default function Example() {
 						</div>
 					</div>
 					<div className="space-y-12">
-						<div className="border-b border-white/10 pb-12">
+						<div className="rounded-md bg-[#252525] px-4 py-12 md:px-10">
+							<h2 className="text-base font-semibold leading-7 text-white">Notifications</h2>
+							<p className="mt-1 text-sm leading-6 text-gray-400">We'll always let you know about important changes, but you pick what else you want to hear about.</p>
+
 							<div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 								<div className="sm:col-span-4">
 									<label htmlFor="username" className="block text-sm font-medium leading-6 text-white">
@@ -129,7 +132,7 @@ export default function Example() {
 							</div>
 						</div>
 
-						<div className="border-b border-white/10 pb-12">
+						<div className="rounded-md bg-[#252525] px-4 py-12 md:px-10">
 							<h2 className="text-base font-semibold leading-7 text-white">Personal Information</h2>
 							<p className="mt-1 text-sm leading-6 text-gray-400">Use a permanent address where you can receive mail.</p>
 
@@ -212,7 +215,7 @@ export default function Example() {
 							</div>
 						</div>
 
-						<div className="border-b border-white/10 pb-12">
+						<div className="rounded-md bg-[#252525] px-4 py-12 md:px-10">
 							<h2 className="text-base font-semibold leading-7 text-white">Notifications</h2>
 							<p className="mt-1 text-sm leading-6 text-gray-400">We'll always let you know about important changes, but you pick what else you want to hear about.</p>
 
@@ -283,7 +286,7 @@ export default function Example() {
 						</div>
 					</div>
 
-					<div className="mt-6 flex items-center justify-end gap-x-6">
+					<div className="mt-10 flex items-center justify-end gap-x-6">
 						<button type="button" className="text-sm font-semibold leading-6 text-white">
 							Cancel
 						</button>

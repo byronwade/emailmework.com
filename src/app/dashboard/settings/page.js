@@ -18,7 +18,10 @@ export default function Example() {
 						</div>
 					</div>
 					<form className="mb-8" action="">
-						<div className="border-b border-white/10 pb-12">
+						<div className="rounded-md bg-[#252525] px-4 py-12 md:px-10">
+							<h2 className="text-base font-semibold leading-7 text-white">Notifications</h2>
+							<p className="mt-1 text-sm leading-6 text-gray-400">We'll always let you know about important changes, but you pick what else you want to hear about.</p>
+
 							<div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 								<div className="sm:col-span-3">
 									<label htmlFor="first-name" className="block text-sm font-medium leading-6 text-white">
@@ -148,7 +151,7 @@ export default function Example() {
 							</div>
 						</div>
 					</div>
-					<div className="mb-10 border-b border-gray-400 pb-10">
+					<div className="mb-10 rounded-md bg-[#252525] px-4 py-12 md:px-10">
 						<div className="-mx-4 flex flex-wrap">
 							<div className="mb-8 w-full px-4 md:mb-0 md:w-1/2">
 								<div className="max-w-xs">
@@ -190,7 +193,16 @@ export default function Example() {
 							</div>
 						</div>
 					</div>
-					<div className="-mx-4 flex flex-wrap items-center justify-between">
+
+					<div className="mt-10 flex items-center justify-end gap-x-6">
+						<button type="button" className="text-sm font-semibold leading-6 text-white">
+							Cancel
+						</button>
+						<button type="submit" className="bg-brown-500 hover:bg-brown-400 focus-visible:outline-brown-500 rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+							Save
+						</button>
+					</div>
+					<div className="mt-40 flex flex-wrap items-center justify-between rounded-md bg-[#252525] px-4 py-12 md:px-10">
 						<div className="mb-6 w-full px-4 md:mb-0 md:w-auto">
 							<div className="max-w-xs">
 								<h4 className="mb-1 font-bold text-gray-50" data-config-id="auto-txt-21-8">

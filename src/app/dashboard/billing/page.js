@@ -35,7 +35,7 @@ export default function Example() {
 							</div> */}
 						</div>
 					</div>
-					<div className="-mx-4 mb-4 flex flex-wrap">
+					<div className="-mx-4 mb-10 flex flex-wrap">
 						<div className="mb-4 w-full px-4 md:mb-0 md:w-1/2">
 							<div className="h-full rounded-md bg-[#252525] p-6">
 								<div className="flex items-center">
@@ -79,7 +79,7 @@ export default function Example() {
 							</div>
 						</div>
 					</div>
-					<div className="mb-6 rounded-md bg-[#252525] px-10 pb-10 pt-6">
+					<div className="mb-10 rounded-md bg-[#252525] px-10 pb-10 pt-6">
 						<div className="-mx-4 mb-6 flex flex-wrap items-center justify-between">
 							<div className="mb-2 w-full px-4 sm:mb-0 sm:w-auto">
 								<h4 className="text-lg font-semibold text-gray-100" data-config-id="auto-txt-7-9">
@@ -100,39 +100,67 @@ export default function Example() {
 								</a>
 							</div>
 						</div>
-						<div className="mb-6 border-b border-gray-400 pb-6">
-							<div className="-mx-4 -mb-5 flex flex-wrap items-center justify-between">
-								<div className="mb-5 w-full px-4 sm:w-auto">
-									<div className="flex items-center">
-										<img className="w-17 mr-4 h-12 self-start" src="trizzle-assets/logos/visa-logo.svg" alt="" data-config-id="auto-img-1-9" />
-										<div>
-											<h5 className="text-sm font-semibold leading-5 text-gray-100" data-config-id="auto-txt-9-9">
-												Visa ending in 3456
-											</h5>
-											<span className="text-xs font-medium text-gray-300" data-config-id="auto-txt-10-9">
-												Expires 04/2028
-											</span>
-										</div>
+						<div className="mb-4 rounded-md bg-[#383a3a] px-6 py-5 sm:flex sm:items-start sm:justify-between">
+							<h4 className="sr-only">Visa</h4>
+							<div className="sm:flex sm:items-start">
+								<svg className="h-8 w-auto sm:h-6 sm:flex-shrink-0" viewBox="0 0 36 24" aria-hidden="true">
+									<rect width={36} height={24} fill="#224DBA" rx={4} />
+									<path
+										fill="#fff"
+										d="M10.925 15.673H8.874l-1.538-6c-.073-.276-.228-.52-.456-.635A6.575 6.575 0 005 8.403v-.231h3.304c.456 0 .798.347.855.75l.798 4.328 2.05-5.078h1.994l-3.076 7.5zm4.216 0h-1.937L14.8 8.172h1.937l-1.595 7.5zm4.101-5.422c.057-.404.399-.635.798-.635a3.54 3.54 0 011.88.346l.342-1.615A4.808 4.808 0 0020.496 8c-1.88 0-3.248 1.039-3.248 2.481 0 1.097.969 1.673 1.653 2.02.74.346 1.025.577.968.923 0 .519-.57.75-1.139.75a4.795 4.795 0 01-1.994-.462l-.342 1.616a5.48 5.48 0 002.108.404c2.108.057 3.418-.981 3.418-2.539 0-1.962-2.678-2.077-2.678-2.942zm9.457 5.422L27.16 8.172h-1.652a.858.858 0 00-.798.577l-2.848 6.924h1.994l.398-1.096h2.45l.228 1.096h1.766zm-2.905-5.482l.57 2.827h-1.596l1.026-2.827z"
+									/>
+								</svg>
+								<div className="mt-3 sm:ml-4 sm:mt-0">
+									<div className="text-sm font-medium text-white">Ending with 4242</div>
+									<div className="mt-1 text-sm text-neutral-400 sm:flex sm:items-center">
+										<div>Expires 12/20</div>
+										<span className="hidden sm:mx-2 sm:inline" aria-hidden="true">
+											&middot;
+										</span>
+										<div className="mt-1 sm:mt-0">Last updated on 22 Aug 2017</div>
 									</div>
 								</div>
-								<div className="mb-5 w-full px-4 sm:w-auto">
-									<a className="ml-auto inline-block rounded-lg bg-gray-600 px-2 py-1 text-xs font-bold leading-6 text-gray-200 transition duration-100 hover:bg-gray-700" href="#" data-config-id="auto-txt-11-9">
-										Default
-									</a>
-								</div>
+							</div>
+							<div className="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
+								<button type="button" className="mr-2 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+									Edit
+								</button>
+
+								<button type="button" className="inline-block rounded-md bg-red-500 px-5 py-2 text-center text-sm font-semibold text-white transition duration-200 hover:bg-red-600">
+									Delete
+								</button>
 							</div>
 						</div>
-						<div>
-							<div className="flex items-center">
-								<img className="w-17 mr-4 h-12 self-start" src="trizzle-assets/logos/card-logo.svg" alt="" data-config-id="auto-img-2-9" />
-								<div>
-									<h5 className="text-sm font-semibold leading-5 text-gray-100" data-config-id="auto-txt-12-9">
-										Visa ending in 3456
-									</h5>
-									<span className="text-xs font-medium text-gray-300" data-config-id="auto-txt-13-9">
-										Expires 04/2028
-									</span>
+
+						<div className="rounded-md bg-[#383a3a] px-6 py-5 sm:flex sm:items-start sm:justify-between">
+							<h4 className="sr-only">Visa</h4>
+							<div className="sm:flex sm:items-start">
+								<svg className="h-8 w-auto sm:h-6 sm:flex-shrink-0" viewBox="0 0 36 24" aria-hidden="true">
+									<rect width={36} height={24} fill="#224DBA" rx={4} />
+									<path
+										fill="#fff"
+										d="M10.925 15.673H8.874l-1.538-6c-.073-.276-.228-.52-.456-.635A6.575 6.575 0 005 8.403v-.231h3.304c.456 0 .798.347.855.75l.798 4.328 2.05-5.078h1.994l-3.076 7.5zm4.216 0h-1.937L14.8 8.172h1.937l-1.595 7.5zm4.101-5.422c.057-.404.399-.635.798-.635a3.54 3.54 0 011.88.346l.342-1.615A4.808 4.808 0 0020.496 8c-1.88 0-3.248 1.039-3.248 2.481 0 1.097.969 1.673 1.653 2.02.74.346 1.025.577.968.923 0 .519-.57.75-1.139.75a4.795 4.795 0 01-1.994-.462l-.342 1.616a5.48 5.48 0 002.108.404c2.108.057 3.418-.981 3.418-2.539 0-1.962-2.678-2.077-2.678-2.942zm9.457 5.422L27.16 8.172h-1.652a.858.858 0 00-.798.577l-2.848 6.924h1.994l.398-1.096h2.45l.228 1.096h1.766zm-2.905-5.482l.57 2.827h-1.596l1.026-2.827z"
+									/>
+								</svg>
+								<div className="mt-3 sm:ml-4 sm:mt-0">
+									<div className="text-sm font-medium text-white">Ending with 4242</div>
+									<div className="mt-1 text-sm text-neutral-400 sm:flex sm:items-center">
+										<div>Expires 12/20</div>
+										<span className="hidden sm:mx-2 sm:inline" aria-hidden="true">
+											&middot;
+										</span>
+										<div className="mt-1 sm:mt-0">Last updated on 22 Aug 2017</div>
+									</div>
 								</div>
+							</div>
+							<div className="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
+								<button type="button" className="mr-2 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+									Edit
+								</button>
+
+								<button type="button" className="inline-block rounded-md bg-red-500 px-5 py-2 text-center text-sm font-semibold text-white transition duration-200 hover:bg-red-600">
+									Delete
+								</button>
 							</div>
 						</div>
 					</div>
@@ -379,7 +407,7 @@ export default function Example() {
 							</table>
 						</div>
 					</div>
-					<div className="-mx-4 flex flex-wrap">
+					<div className="flex flex-wrap rounded-md bg-[#252525] p-6">
 						<div className="mb-8 w-full px-4 md:mb-0 md:w-1/2">
 							<div className="mx-auto max-w-xs">
 								<h4 className="mb-1 font-bold text-gray-50" data-config-id="auto-txt-43-9">
@@ -407,7 +435,7 @@ export default function Example() {
 								<p className="mb-5 text-xs font-medium leading-5 text-gray-300" data-config-id="auto-txt-47-9">
 									You will lose access to all premium features in your current subscription plan
 								</p>
-								<a className="text-brown-500 inline-block text-xs font-medium hover:underline" href="#" data-config-id="auto-txt-48-9">
+								<a className="inline-block text-xs font-medium text-red-600 hover:underline" href="#" data-config-id="auto-txt-48-9">
 									Cancel Subscription
 								</a>
 							</div>
