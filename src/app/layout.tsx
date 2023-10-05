@@ -15,7 +15,6 @@ const ThemeColor = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-	console.log(useTheme);
 	return (
 		<ThemeProvider>
 			<html className="h-full">

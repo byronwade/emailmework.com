@@ -8,10 +8,10 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [mode, setMode] = useState('bg-[#1c1c1c]');
+  const [mode, setMode] = useState("bg-[#111]");
 
   const toggleMode = () => {
-    setMode(mode === 'bg-[#1c1c1c]' ? 'bg-[#f1f1f1]' : 'bg-[#1c1c1c]');
+    setMode(mode === "bg-[#111]" ? "bg-[#f1f1f1]" : "bg-[#111]");
   };
 
   return (
