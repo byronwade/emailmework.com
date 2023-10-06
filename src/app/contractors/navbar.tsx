@@ -13,6 +13,7 @@ const user = {
 };
 const navigation = [
 	{ name: "Dashboard", href: "/contractors" },
+	{ name: "Leads", href: "/contractors/leads" },
 	{ name: "Profile", href: "/contractors/profile" },
 	{ name: "Reviews", href: "/contractors/reviews" },
 	{ name: "Insights", href: "/contractors/insights" },
@@ -52,13 +53,18 @@ export default function Navbar() {
 									<Image src="/images/logo.png" width={45} height={45} alt="Company Logo" />
 								</div>
 								<div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+									<span className="text-lg text-white">Byron Wade</span>
+									<span className="text-lg text-gray-400">/</span>
 									<Link href="/customers" className="focus-ring hover:bg-brown-600/10 text-primary bg-primary relative box-border inline-flex shrink-0 select-none items-center justify-center overflow-hidden whitespace-nowrap rounded border border-white/20 px-4 py-2 text-center font-semibold leading-none no-underline transition">
-										Switch to customer
+										Wade's Plumbing & Septic
 									</Link>
 								</div>
 							</div>
 							<div className="flex items-center">
 								<div className="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center">
+									<Link href="/customers" className="focus-ring hover:bg-brown-600/10 text-primary bg-primary relative mr-4 box-border inline-flex shrink-0 select-none items-center justify-center overflow-hidden whitespace-nowrap rounded border border-white/20 px-4 py-2 text-center font-semibold leading-none no-underline transition">
+										Switch to customer
+									</Link>
 									<button type="button" className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
 										<span className="absolute -inset-1.5" />
 										<span className="sr-only">View notifications</span>

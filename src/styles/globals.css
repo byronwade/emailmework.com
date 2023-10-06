@@ -70,7 +70,8 @@ th {
     border-top-width: 1px;
     border-bottom-width: 1px;
     background-color: #1a1a1a;
-    line-height: 1rem
+    line-height: 1rem;
+    border-color: rgb(255 255 255 / 0.2)
 }
 
 th:first-child {
@@ -88,7 +89,8 @@ th:last-child {
 td {
     text-align: left;
     padding: 16px;
-    border-bottom-width: 1px
+    border-bottom-width: 1px;
+    border-color: rgb(255 255 255 / 0.2)
 }
 
 td.right-align,th.right-align {

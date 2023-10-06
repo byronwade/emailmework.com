@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
+const services = ["Septic Tank Installer", "Septic Tank Pumping", "Septic Tank Repair", "Septic Tank Replacement", "Septic Tank Services", "Sewer", "Drain Cleaning", "Pipe Repair", "Leak Detection", "Water Heater Installation", "Water Heater Repair", "Emergency Plumbing", "Toilet Repair", "Faucet Installation", "Garbage Disposal Repair", "Hydro Jetting"];
+
 export default function Profile() {
 	return (
 		<div className="mx-auto w-full flex-1 px-6 py-8 sm:px-12 sm:py-12">
@@ -27,9 +29,9 @@ export default function Profile() {
 								<svg className="mr-1 h-4 w-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
 									<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
 								</svg>
-								<p className="ml-2 text-sm font-bold text-gray-900 dark:text-white">9.95/10</p>
-								<span className="mx-1.5 h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400"></span>
-								<a href="#" className="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white">
+								<p className="ml-2 text-sm font-bold text-white">9.95/10</p>
+								<span className="mx-1.5 h-1 w-1 rounded-full bg-gray-400"></span>
+								<a href="#" className="text-sm font-medium text-white underline hover:no-underline">
 									73 reviews
 								</a>
 							</div>
@@ -82,7 +84,13 @@ export default function Profile() {
 								<h2 className="text-bold text-lg">Services Offered</h2>
 							</div>
 							<div>
-								test
+								<div>
+									{services.map((service) => (
+										<button key={service} type="button" className="mb-2 mr-2 rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+											{service}
+										</button>
+									))}
+								</div>
 								<button className="focus-ring hover:bg-brown-600/10 text-primary bg-primary relative box-border inline-flex shrink-0 select-none items-center justify-center overflow-hidden whitespace-nowrap rounded border border-white/20 px-4 py-2 text-center font-semibold leading-none no-underline transition">
 									See 34 more
 									<CheckCircleIcon className="-mr-0.5 ml-2 h-5 w-5" aria-hidden="true" />
