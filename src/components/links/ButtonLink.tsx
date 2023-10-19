@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import UnstyledLink, {
   UnstyledLinkProps,
 } from '@/components/links/UnstyledLink';
+import IconButton from "../buttons/IconButton";
 
 const ButtonLinkVariant = [
   'primary',
@@ -84,5 +85,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 	);
   }
 );
+
+ButtonLink.displayName = "ButtonLink";
 
 export default ButtonLink;

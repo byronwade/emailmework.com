@@ -1,22 +1,18 @@
 "use client"
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState } from "react"
 
-const ThemeContext = createContext();
+const ThemeContext = createContext()
 
 export const useTheme = () => {
-  return useContext(ThemeContext);
-};
+  return useContext(ThemeContext)
+}
 
 export const ThemeProvider = ({ children }) => {
-  const [mode, setMode] = useState("bg-[#111]");
+  const [mode, setMode] = useState("bg-[#111]")
 
   const toggleMode = () => {
-    setMode(mode === "bg-[#111]" ? "bg-[#f1f1f1]" : "bg-[#111]");
-  };
+    setMode(mode === "bg-[#111]" ? "bg-[#f1f1f1]" : "bg-[#111]")
+  }
 
-  return (
-    <ThemeContext.Provider value={{ mode, toggleMode }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-};
+  return <ThemeContext.Provider value={{ mode, toggleMode }}>{children}</ThemeContext.Provider>
+}

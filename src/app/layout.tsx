@@ -1,24 +1,17 @@
 "use client";
-import { AuthContextProvider } from "../context/AuthContext";
 import { ThemeProvider, useTheme } from "../context/ThemeContext"; // Adjust the import path
 
-import "@/styles/globals.css";
+import "./globals.css";
 
-const ThemeColor = ({ children }: { children: React.ReactNode }) => {
-	const { mode } = useTheme(); // Destructure mode from useTheme
+interface RootLayoutProps {
+	children: React.ReactNode;
+}
 
-	return (
-		<body className={`h-full ${mode}`}>
-			<AuthContextProvider>{children}</AuthContextProvider>
-		</body>
-	);
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<ThemeProvider>
 			<html className="h-full">
-				<ThemeColor>{children}</ThemeColor>
+				<body className={`h-full bg-[#111]`}>{children}</body>
 			</html>
 		</ThemeProvider>
 	);
