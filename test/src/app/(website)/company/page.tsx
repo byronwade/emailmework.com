@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Map from "../../components/Map";
+import Map from "../../../components/Map";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 const services = ["Septic Tank Installer", "Septic Tank Pumping", "Septic Tank Repair", "Septic Tank Replacement", "Septic Tank Services", "Sewer", "Drain Cleaning", "Pipe Repair", "Leak Detection", "Water Heater Installation", "Water Heater Repair", "Emergency Plumbing", "Toilet Repair", "Faucet Installation", "Garbage Disposal Repair", "Hydro Jetting"];
