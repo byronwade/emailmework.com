@@ -1,3 +1,4 @@
+import { ThemeProviderEmailMe } from "../components/theme-provider";
 import "./globals.css";
 
 export const metadata = {
@@ -8,7 +9,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html className="h-full">
-			<body className={`h-full bg-[#111]`}>{children}</body>
+			<body className={`h-full`}>
+				<ThemeProviderEmailMe attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+					<div className="text-dark dark:text-white">{children}</div>
+				</ThemeProviderEmailMe>
+			</body>
 		</html>
 	);
 }
