@@ -57,8 +57,8 @@ export default async function Index() {
 								<span>Wade&#39;s Plumbing & Septic</span>
 							</h1>
 							<div className="flex items-center space-x-1">
-								<div className="text-primary inline-flex items-center space-x-1 rounded-full border border-dark border-white/20 bg-dark dark:bg-white/20 px-2 text-sm font-medium">
-									<div className="whitespace-nowrap pt-px">Free</div>
+								<div className="text-primary inline-flex items-center space-x-1 rounded-full border border-dark/20 dark:border-white/20 bg-dark dark:bg-white px-2 text-sm font-medium">
+									<div className="whitespace-nowrap pt-px text-white dark:text-dark">Free</div>
 								</div>
 								<a className="text-xs font-medium text-blue-400" href="#">
 									Upgrade
@@ -110,12 +110,12 @@ export default async function Index() {
 									</p>
 								</div>
 							</div>
-							<a className="space-x-2-box-border focus-ring hover:bg-brown-600/10 text-primary bg-primary relative inline-flex w-full shrink-0 select-none items-center justify-center overflow-hidden whitespace-nowrap rounded border border-dark/20 dark:border-white/20 px-2 py-1.5 text-center font-semibold leading-none no-underline transition">View More Details</a>
-							<div className="border-brown-700 bg-brown-950 space-y-4 rounded border p-3">
+							<a className="space-x-2-box-border focus-ring hover:bg-brown-600/10text-white relative inline-flex w-full shrink-0 select-none items-center justify-center overflow-hidden whitespace-nowrap rounded border border-dark/20 dark:border-white/20 px-2 py-1.5 text-center font-semibold leading-none no-underline transition">View More Details</a>
+							<div className="text-white border-brown-700 bg-brown-950 space-y-4 rounded border p-3">
 								<h3 className="text-lg font-semibold">This database has no production branches</h3>
 								<p>Production branches have an additional replica used for high availability as well as zero-downtime upgrades and failovers. </p>
 								<form action="https://api.planetscale.com/v1/organizations/bcw1995/databases/byronwade-com/branches/main/promote" method="post">
-									<button type="submit" className="space-x-2-box-border focus-ring hover:bg-brown-600/10 text-primary bg-primary relative inline-flex w-full shrink-0 select-none items-center justify-center overflow-hidden whitespace-nowrap rounded border border-dark/20 dark:border-white/20 px-2 py-1.5 text-center font-semibold leading-none no-underline transition">
+									<button type="submit" className="space-x-2-box-border focus-ring hover:bg-brown-600/10 text-white relative inline-flex w-full shrink-0 select-none items-center justify-center overflow-hidden whitespace-nowrap rounded border border-white/20 px-2 py-1.5 text-center font-semibold leading-none no-underline transition">
 										<Shield width={16} height={16} className="mr-1 text-green-600" />
 										Promote to production
 									</button>
