@@ -1,8 +1,15 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import { fontFamily } from "tailwindcss/defaultTheme";
+
+const config = {
 	darkMode: ["class"],
-	content: ["./pages/**/*.{js,jsx}", "./components/**/*.{js,jsx}", "./app/**/*.{js,jsx}", "./src/**/*.{js,jsx}"],
+	content: ["./pages/**/*.{ts,tsx,js,jsx}", "./components/**/*.{ts,tsx,js,jsx}", "./app/**/*.{ts,tsx,js,jsx}", "./src/**/*.{ts,tsx,js,jsx}"],
 	prefix: "",
+
+	variants: {
+		extend: {
+			animation: ["responsive", "hover", "focus"],
+		},
+	},
 	theme: {
 		container: {
 			center: true,
@@ -16,6 +23,7 @@ module.exports = {
 				sans: ["var(--font-sans)", ...fontFamily.sans],
 			},
 			colors: {
+				brand: "#8d57ce",
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",
@@ -64,12 +72,25 @@ module.exports = {
 					from: { height: "var(--radix-accordion-content-height)" },
 					to: { height: "0" },
 				},
+
+				"caret-blink": {
+					"0%,70%,100%": { opacity: "1" },
+					"20%,50%": { opacity: "0" },
+				},
+				bounce: {
+					"0%, 80%, 100%": { transform: "scale(0)" },
+					"40%": { transform: "scale(1)" },
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
+				"caret-blink": "caret-blink 1.25s ease-out infinite",
+				bounce: "bounce 1.5s infinite ease-in-out",
 			},
 		},
 	},
 	plugins: [require("tailwindcss-animate")],
 };
+
+export default config;
