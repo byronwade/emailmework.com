@@ -1,6 +1,6 @@
 // app/page.tsx
 
-import Header from "@/components/(site)/Header";
+import Header from "@/components/site/Header";
 
 export const metadata = {
 	title: "EmailMeWork - Find Professional Services Easily",

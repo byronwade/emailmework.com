@@ -1,45 +1,29 @@
-// context/UserContext.js
-import React, { createContext, useState, useEffect, useContext } from "react";
-import { supabase } from "@/lib/supabaseClient";
-import { fakeUser } from "@/lib/fakeData";
+"use client";
+
+import React, { createContext, useContext } from "react";
+import useSWR from "swr";
+import axios from "axios";
 
 const UserContext = createContext();
 
+const fetcher = (url) => axios.get(url).then((res) => res.data);
+
 export const UserProvider = ({ children }) => {
-	const [user, setUser] = useState(null);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
+	const { data: users, error: usersError } = useSWR("/api/users", fetcher);
 
-	useEffect(() => {
-		const getSession = async () => {
-			setLoading(true);
-			if (process.env.NEXT_PUBLIC_USE_FAKE_DATA === "true") {
-				setUser(fakeUser);
-				setLoading(false);
-				return;
-			}
-			const { data: session, error } = await supabase.auth.getSession();
-			setUser(session?.user ?? null);
-			setError(error);
-			setLoading(false);
-		};
-		getSession();
-	}, []);
-
-	const signOut = async () => {
-		setLoading(true);
-		const { error } = await supabase.auth.signOut();
-		if (error) {
-			setError(error);
-		} else {
-			setUser(null);
-		}
-		setLoading(false);
+	const value = {
+		users,
+		usersError,
+		isLoading: !users && !usersError,
 	};
 
-	return <UserContext.Provider value={{ user, loading, error, signOut, setUser }}>{children}</UserContext.Provider>;
+	return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
 
 export const useUser = () => {
-	return useContext(UserContext);
+	const context = useContext(UserContext);
+	if (context === undefined) {
+		throw new Error("useUser must be used within a UserProvider");
+	}
+	return context;
 };
