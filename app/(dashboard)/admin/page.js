@@ -1,5 +1,7 @@
-import React from "react";
-
 export default function Admin() {
-	return <div>Admin</div>;
+	return (
+		<div>
+			<h1 className="text-2xl font-black">Admin</h1>
+		</div>
+	);
 }

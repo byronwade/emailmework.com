@@ -2,6 +2,8 @@
 
 import Header from "@/components/site/Header";
 
+import SearchForm from "@/components/site/SearchForm";
+
 export const metadata = {
 	title: "EmailMeWork - Find Professional Services Easily",
 	description: "EmailMeWork connects customers with professional service providers effortlessly. Post your job and get connected with the right professionals.",
@@ -41,9 +43,8 @@ export default function Home() {
 	return (
 		<>
 			<Header />
-			<main className="container p-4 mx-auto">
-				<h1>Welcome to EmailMeWork</h1>
-				<p>Your go-to platform for finding professional services effortlessly.</p>
+			<main>
+				<SearchForm />
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }} />
 			</main>
 		</>
