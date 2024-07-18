@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function BlogPage() {
-	return <div>BlogPage</div>;
+export default function Blog() {
+	return <div>Blog</div>;
 }
