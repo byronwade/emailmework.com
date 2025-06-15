@@ -7,7 +7,14 @@ export default function NavItem({ href, text, className }) {
 	const isActive = pathname === href;
 
 	return (
-		<Link href={href} className={`px-2 py-1 text-sm rounded-md ${isActive ? "bg-blue-200 text-brand" : "text-gray-600"} ${className}`}>
+		<Link
+			href={href}
+			className={`
+				px-3 py-1.5 text-sm rounded transition-colors duration-150
+				${isActive ? "bg-blue-500 text-white" : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"} 
+				${className}
+			`}
+		>
 			{text}
 		</Link>
 	);
